@@ -38,10 +38,14 @@ export default function Home() {
       </Head>
       <section id={styles.hero} ref={ref} onMouseMove={(e) => handleMouseMove(e)}>
         <MyAvatar x={xCord} y={yCord} />
-        <div style={{height:"max-content"}}>
+        <div style={{ height: "max-content" }}>
           <h1>
-            Hi, my <br className={styles.lineBreak}/>name is <b>Abrar</b>.
+            Hi, my <br className={styles.lineBreak} />
+            name is <b>Abrar</b>.
           </h1>
+          <p>
+            I'm a <b>creative developer</b> from Dhaka, Bangladesh
+          </p>
         </div>
       </section>
       <main className={styles.main}>
