@@ -7,17 +7,23 @@ import MyAvatar from '../src/components/MyAvatar'
 import { useEffect, useRef, useState } from 'react'
 export default function Home() {
   const ref = useRef();
+  const scrollRef = useRef();
   const [xCord, setXCord] = useState(0);
   const [yCord, setYCord] = useState(0);
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     setLoading(false)
+    window.addEventListener("scroll", (e)=>{
+      if(window.scrollY>100){
+        scrollRef.current.className=styles.fadeOut
+        window.removeEventListener("scroll",()=>console.log("remove listener"))
+      }
+      }
+    )
   }, [])
 
   const handleMouseMove = ({ clientX, clientY }) => {
-    console.log("cx:", clientX)
-    console.log("window:", ref.current.clientWidth)
     const x = ( clientX / ref.current.clientWidth * 100 - 50) // varries from -50 to 50
     const y = ( clientY / ref.current.clientHeight * 100 - 50) // varries from -50 to 50
     setXCord(x)
@@ -38,7 +44,7 @@ export default function Home() {
       </Head>
       <section ref={ref} onMouseMove={(e) => handleMouseMove(e)} style={{ position: "relative" }}>
         <div id={styles.hero}>
-          <MyAvatar x={xCord} y={yCord} />
+          <MyAvatar x={xCord} y={yCord}/>
           <div style={{ height: "max-content" }}>
             <h1>
               Hi, my <br className={styles.lineBreak} />
@@ -50,7 +56,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <p className={styles.scroll}>
+        <p className={styles.scroll} ref={scrollRef}>
           <span>S</span>
           <span>C</span>
           <span>R</span>
