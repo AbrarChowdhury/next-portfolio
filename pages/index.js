@@ -36,17 +36,28 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <style>@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500&display=swap');</style>
       </Head>
-      <section id={styles.hero} ref={ref} onMouseMove={(e) => handleMouseMove(e)}>
-        <MyAvatar x={xCord} y={yCord} />
-        <div style={{ height: "max-content" }}>
-          <h1>
-            Hi, my <br className={styles.lineBreak} />
-            name is <b>Abrar</b>.
-          </h1>
-          <p>
-            I'm a <b>creative developer</b> from Dhaka, Bangladesh
-          </p>
+      <section ref={ref} onMouseMove={(e) => handleMouseMove(e)} style={{ position: "relative" }}>
+        <div id={styles.hero}>
+          <MyAvatar x={xCord} y={yCord} />
+          <div style={{ height: "max-content" }}>
+            <h1>
+              Hi, my <br className={styles.lineBreak} />
+              name is <b>Abrar</b>
+              <span>.</span>
+            </h1>
+            <p>
+              I'm a <b>creative developer</b> from Dhaka, Bangladesh
+            </p>
+          </div>
         </div>
+        <p className={styles.scroll}>
+          <span>S</span>
+          <span>C</span>
+          <span>R</span>
+          <span>O</span>
+          <span>L</span>
+          <span>L</span>
+        </p>
       </section>
       <main className={styles.main}>
         <section id="about">
