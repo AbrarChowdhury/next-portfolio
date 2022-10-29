@@ -3,10 +3,10 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 import { AiFillGithub, AiFillCodepenCircle } from "react-icons/ai"
-import MyAvatar from '../src/components/MyAvatar'
-import { useEffect, useRef, useState } from 'react'
-import About from '../src/components/About'
-import Projects from '../src/components/Projects'
+import MyAvatar from "../components/MyAvatar"
+import { useEffect, useRef, useState } from "react"
+import About from "../components/About"
+import Projects from "../components/Projects"
 export default function Home() {
   const ref = useRef();
   const scrollRef = useRef();

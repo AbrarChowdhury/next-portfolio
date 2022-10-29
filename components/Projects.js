@@ -1,12 +1,12 @@
 import React, { useState } from "react"
-import projectsData from "../projectsData"
+import projectsData from "../src/projectsData"
 
 const Projects = () => {
   return (
     <section id="portfolio">
       <h1 className="title">Projects</h1>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "20px" }}>
-        {projectsData.map((project,i) => (
+        {projectsData.map((project, i) => (
           <Cards key={i} project={project} />
         ))}
       </div>
