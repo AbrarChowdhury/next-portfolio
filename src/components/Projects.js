@@ -28,6 +28,7 @@ function Cards({ project }) {
       href={link}
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
+      key={title}
     >
       <h2>{title}</h2>
       <p>{desc}</p>
