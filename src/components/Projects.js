@@ -6,8 +6,8 @@ const Projects = () => {
     <section id="portfolio">
       <h1 className="title">Projects</h1>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "20px" }}>
-        {projectsData.map((project) => (
-          <Cards project={project} />
+        {projectsData.map((project,i) => (
+          <Cards key={i} project={project} />
         ))}
       </div>
     </section>
@@ -28,7 +28,6 @@ function Cards({ project }) {
       href={link}
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
-      key={title}
     >
       <h2>{title}</h2>
       <p>{desc}</p>
