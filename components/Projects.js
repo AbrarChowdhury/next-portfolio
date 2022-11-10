@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import projectsData from "../src/projectsData"
+import projectsData from "../projectsData"
 
 const Projects = () => {
   return (

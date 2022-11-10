@@ -69,11 +69,10 @@ export default function Home() {
           <span>L</span>
         </p>
       </section>
+
       <main className={styles.main}>
         <About/>
-        
         <Projects/>
-
         <section id="contact">
           <h1 className="title">Get In Touch</h1>
         </section>
