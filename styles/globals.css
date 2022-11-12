@@ -7,6 +7,9 @@ body {
     color: #0f1b61;
     background: #f4f9fc;
 }
+h1{
+  font-family: Bitter, serif;
+}
 
 a {
   color: inherit;
@@ -22,13 +25,3 @@ h1{
   font-size: 3rem;
   font-weight: 700;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: #0f1b61;
-    background: #f4f9fc;
-  }
-} */
