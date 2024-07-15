@@ -7,6 +7,7 @@ import MyAvatar from "../components/MyAvatar"
 import { useEffect, useRef, useState } from "react"
 import About from "../components/About"
 import Projects from "../components/Projects"
+import ExperienceSection from '../components/ExperienceSection'
 export default function Home() {
   const ref = useRef();
   const scrollRef = useRef();
@@ -17,14 +18,14 @@ export default function Home() {
 
   useEffect(() => {
     setLoading(false)
-    window.addEventListener("scroll", (e)=>{
-      setScrollPosition(window.scrollY)
-      if(window.scrollY>100){
-        scrollRef.current.className=styles?.fadeOut
-        window.removeEventListener("scroll",()=>console.log("remove listener"))
-      }
-      }
-    )
+    // window.addEventListener("scroll", (e)=>{
+    //   setScrollPosition(window.scrollY)
+    //   if(window.scrollY>100){
+    //     // scrollRef?.current?.className=styles?.fadeOut
+    //     window.removeEventListener("scroll",()=>console.log("remove listener"))
+    //   }
+    //   }
+    // )
   }, [])
 
   const handleMouseMove = ({ clientX, clientY }) => {
@@ -72,6 +73,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <About/>
+        <ExperienceSection/>
         <Projects/>
         <section id="contact">
           <h1 className="title">Get In Touch</h1>

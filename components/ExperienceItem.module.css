@@ -1,0 +1,29 @@
+/* ExperienceItem.module.css */
+
+.xp-heading {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .responsibilities {
+    /* cursor: pointer; */
+    /* text-decoration: underline; */
+  }
+  
+  .date {
+    position: relative;
+  }
+  
+  .date p {
+    font-size: 30px;
+  }
+  
+  .short-modal {
+    display: none;
+    position: absolute;
+    background-color: black;
+    padding: 10px;
+    z-index: 1000;
+    color: white;
+  }
+  
