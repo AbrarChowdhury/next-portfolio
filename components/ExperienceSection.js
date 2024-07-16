@@ -7,7 +7,7 @@ const ExperienceSection = () => {
       <h2 className={styles.heading}>Experience</h2>
       <div className={styles.content}>
         <ExperienceItem
-          date="Mar 2020 - Present"
+          date="Aug 2023 - Present"
           company="Tech Dojo Ltd."
           role="Software Engineer"
           responsibilities="Responsibilities include designing and developing web applications, collaborating with cross-functional teams, and ensuring high performance and responsiveness of applications."
@@ -42,7 +42,7 @@ const ExperienceSection = () => {
           ]}
         />
         <ExperienceItem
-          date="Jan 2018 - Feb 2020"
+          date="Nov 2020 - July 2023"
           company="Bioforge Health Systems"
           role="Software Engineer"
           responsibilities="Responsibilities include developing software solutions for medical devices, collaborating with the product design team, and ensuring compliance with healthcare regulations."
@@ -73,7 +73,7 @@ const ExperienceSection = () => {
           ]}
         />
         <ExperienceItem
-          date="Jan 2016 - Dec 2017"
+          date="Jan 2019 - June 2020"
           company="Bioforge Health Systems"
           role="Product Designer"
           responsibilities="Responsibilities include designing medical devices, creating prototypes, and collaborating with engineers to bring products to market."
