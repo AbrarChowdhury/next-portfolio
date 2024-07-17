@@ -10,8 +10,9 @@ const ExperienceItem = ({
 }) => {
   const [isCollapsed, setIsCollapsed] = useState(true)
   const [height, setHeight] = useState("0px")
-  const contentRef = useRef(null)
 
+  const contentRef = useRef(null)
+  const desginationRef = useRef(null)
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed)
   }
@@ -54,14 +55,25 @@ const ExperienceItem = ({
             onClick={toggleCollapse}
             style={{
               textAlign: "center",
-              borderTop: "5px solid #abdcec",
-              borderRight: "5px solid #abdcec",
-              borderBottom: "5px solid #abdcec",
               cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: "15px",
             }}
           >
-            <h3>{isCollapsed ? "View Projects" : "Hide Projects"}</h3>
-            <img src="arrow_single_down.svg" />
+            <h3 style={{ margin: 0 }}>
+              {isCollapsed ? "View Projects" : "Hide Projects"}
+            </h3>
+            <img
+              src='arrow_single_down.svg'
+              width='30px'
+              style={{
+                marginLeft: "10px",
+                transform: isCollapsed ? "rotate(0deg)" : "rotate(180deg)",
+                transition: "transform 0.3s ease",
+              }}
+            />
           </div>
         </div>
 
@@ -69,14 +81,43 @@ const ExperienceItem = ({
           style={{
             flex: 1,
             marginTop: "10px",
-            borderBottom: "5px solid #abdcec",
+            padding: "0 50px",
+            background: "url(rect_back.svg)",
+            backgroundSize: "90% 100%",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            width: "100%",
+            height: "100%",
           }}
+          ref={desginationRef}
         >
-          <h3 style={{ marginBottom: "5px", textTransform: "uppercase" }}>
-            {company}
-          </h3>
-          <h2 style={{ marginTop: "0px" }}>{role}</h2>
-          <p>{responsibilities}</p>
+          <div style={{}}>
+            {/* <img
+              src='rect_back.svg'
+              style={{
+                position: "absolute",
+                left: "0",
+                top: "-10px",
+                width: `${desginationRef?.current?.width}px`,
+                height: `${desginationRef?.current?.height}px`,
+                zIndex: "-1",
+              }}
+            ></img> */}
+            <div
+              style={
+                {
+                  // background: "#abdcec",
+                  // padding: "10px",
+                }
+              }
+            >
+              <h3 style={{ marginBottom: "5px", textTransform: "uppercase" }}>
+                {company}
+              </h3>
+              <h2 style={{ marginTop: "0px" }}>{role}</h2>
+              <p>{responsibilities}</p>
+            </div>
+          </div>
         </div>
       </div>
       <div
@@ -84,9 +125,12 @@ const ExperienceItem = ({
         style={{
           height: height,
           overflow: "hidden",
-          transition: "height 0.3s ease",
-          background: "white",
           padding: "0px 55px",
+          background: "url(sub_proj.svg)",
+          backgroundSize: "100% 100%",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          transition: "height 0.4s ease",
         }}
       >
         {projects.map((project, index) => (
