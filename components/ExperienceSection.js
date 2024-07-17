@@ -4,7 +4,7 @@ import ExperienceItem from "./ExperienceItem"
 const ExperienceSection = () => {
   return (
     <section id='experience'>
-      <h1 >Experience</h1>
+      <h1>Experience</h1>
       <div className={styles.content}>
         <ExperienceItem
           date='Now'
@@ -114,16 +114,21 @@ const ExperienceSection = () => {
 
         <div style={{ borderLeft: "5px solid #abdcec", position: "relative" }}>
           <img
-            src='clock.svg'
-            width='100px'
-            style={{ position: "absolute", left: "-52.5px" }}
+            src='clock_end.svg'
+            width='60px'
+            style={{ position: "absolute", left: "-32.5px" }}
           />
-          <div style={{ flex: 1, marginTop: "30px" }}>
-            <span
-              style={{ marginLeft: "55px", fontSize: "2em", display: "inline" }}
+          <div>
+            <p
+              style={{
+                marginLeft: "55px",
+                marginTop:"0px",
+                paddingTop: "15px",
+                fontSize: "2em",
+              }}
             >
               Jan 2020
-            </span>
+            </p>
           </div>
         </div>
       </div>

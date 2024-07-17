@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import ProjectItem from "./ProjectItem"
 
 const ExperienceItem = ({
@@ -9,10 +9,16 @@ const ExperienceItem = ({
   projects,
 }) => {
   const [isCollapsed, setIsCollapsed] = useState(true)
+  const [height, setHeight] = useState("0px")
+  const contentRef = useRef(null)
 
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed)
   }
+
+  useEffect(() => {
+    setHeight(isCollapsed ? "0px" : `${contentRef.current.scrollHeight}px`)
+  }, [isCollapsed])
 
   return (
     <div
@@ -23,7 +29,7 @@ const ExperienceItem = ({
       }}
     >
       <img
-        src='clock.svg'
+        src={date == "Now" ? "clock_start.svg" : "clock.svg"}
         width='60px'
         style={{ position: "absolute", left: "-32.5px" }}
       />
@@ -42,7 +48,7 @@ const ExperienceItem = ({
             <img
               style={{ display: "inline", width: "100px" }}
               src='arrow.svg'
-            ></img>
+            />
           </div>
           <div
             onClick={toggleCollapse}
@@ -51,9 +57,11 @@ const ExperienceItem = ({
               borderTop: "5px solid #abdcec",
               borderRight: "5px solid #abdcec",
               borderBottom: "5px solid #abdcec",
+              cursor: "pointer",
             }}
           >
-            {isCollapsed ? "Show Projects" : "Hide Projects"}
+            <h3>{isCollapsed ? "View Projects" : "Hide Projects"}</h3>
+            <img src="arrow_single_down.svg" />
           </div>
         </div>
 
@@ -71,18 +79,23 @@ const ExperienceItem = ({
           <p>{responsibilities}</p>
         </div>
       </div>
-      <div style={{ padding: "0px 55px" }}>
-        {!isCollapsed && (
-          <div>
-            {projects.map((project, index) => (
-              <ProjectItem
-                style={{ borderBottom: "5px solid #abdcec" }}
-                key={index}
-                {...project}
-              />
-            ))}
-          </div>
-        )}
+      <div
+        ref={contentRef}
+        style={{
+          height: height,
+          overflow: "hidden",
+          transition: "height 0.3s ease",
+          background: "white",
+          padding: "0px 55px",
+        }}
+      >
+        {projects.map((project, index) => (
+          <ProjectItem
+            style={{ borderBottom: "5px solid #abdcec" }}
+            key={index}
+            {...project}
+          />
+        ))}
       </div>
     </div>
   )
