@@ -20,10 +20,13 @@ function Cards({ project }) {
   return (
     <a
       style={{
-        border: "2px solid #abdcec",
         display: "block",
         padding: "10px",
         position: "relative",
+        background: "url(rect_back.svg)",
+        backgroundSize: "100% 100%",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
       }}
       href={link}
       onMouseEnter={() => setHovering(true)}

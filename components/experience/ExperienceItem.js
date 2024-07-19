@@ -47,7 +47,7 @@ const ExperienceItem = ({
           <div>
             <span style={{ marginLeft: "55px", fontSize: "2em" }}>{date}</span>
             <img
-              style={{ display: "inline", width: "100px" }}
+              style={{ display: "inline", width: "100px", marginLeft: "10px"}}
               src='arrow.svg'
             />
           </div>
