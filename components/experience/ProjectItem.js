@@ -37,7 +37,7 @@ const ProjectItem = ({
             position: "absolute",
             width: "100%",
             height: "100%",
-            background: "rgba(0,0,0,0.2)",
+            background: "rgba(255,255,255,0.9)",
           }}
           onClick={() => setModal(false)}
         ></div>
@@ -45,30 +45,38 @@ const ProjectItem = ({
           style={{
             width: "50vw",
             height: "50vh",
-            background: "white",
+            background: "url(rect_modal.svg)",
+            backgroundSize: "100% 100%",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
             position: "relative",
           }}
         >
           <img
             src='cross.svg'
             width='20px'
-            style={{ position: "absolute", right: "10px", top: "10px" }}
+            style={{ position: "absolute", right: "25px", top: "25px" }}
             onClick={() => setModal(false)}
           />
-          <div>
+          <div style={{ padding: "25px" }}>
             <h1>{modal.imageAlt}</h1>
           </div>
         </div>
       </div>
       <div
         style={{
-          display: "flex",
-          alignItems: "center",
-          background: "#abdcec",
-          padding: "10px",
+          // display: "flex",
+          // alignItems: "center",
+          background: "url(rect_back.svg)",
+            backgroundSize: "100% 100%",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          padding: "20px",
         }}
       >
+        <h2>{title}</h2>
         <img width='100%' src={imageSrc} alt={imageAlt} />
+        <p style={{ marginTop: "0" }}>{description}</p>
       </div>
       <div
         style={{
@@ -78,8 +86,6 @@ const ProjectItem = ({
           flexDirection: "column",
         }}
       >
-        <h3 style={{ margin: "0" }}>{title}</h3>
-        <p style={{ marginTop: "0" }}>{description}</p>
         <div className='tech-icons'></div>
         {coreFeatures && (
           <div>
