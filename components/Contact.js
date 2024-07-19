@@ -40,37 +40,47 @@ const ContactForm = () => {
   }
 
   return (
-    <form id='contact-form' onSubmit={handleSubmit}>
-      <label htmlFor='from_name'>Name:</label>
-      <input
-        type='text'
-        id='name'
-        name='from_name'
-        value={formState.from_name}
-        onChange={handleChange}
-        required
-      />
-      <label htmlFor='from_email'>Email:</label>
-      <input
-        type='email'
-        id='from_email'
-        name='from_email'
-        value={formState.from_email}
-        onChange={handleChange}
-        required
-      />
-      <label htmlFor='message'>Message:</label>
-      <textarea
-        id='message'
-        name='message'
-        value={formState.message}
-        onChange={handleChange}
-        required
-      ></textarea>
-      <button id='button' type='submit'>
-        {buttonText}
-      </button>
-    </form>
+    <div
+      style={{
+        position: 'relative',
+        minHeight:"600px"
+      }}
+    >
+      <img src="mail.svg" width="600vw" style={{
+        position: 'absolute',
+      }}/>
+      <form id='contact-form' onSubmit={handleSubmit}>
+        <label htmlFor='from_name'>Name:</label>
+        <input
+          type='text'
+          id='name'
+          name='from_name'
+          value={formState.from_name}
+          onChange={handleChange}
+          required
+        />
+        <label htmlFor='from_email'>Email:</label>
+        <input
+          type='email'
+          id='from_email'
+          name='from_email'
+          value={formState.from_email}
+          onChange={handleChange}
+          required
+        />
+        <label htmlFor='message'>Message:</label>
+        <textarea
+          id='message'
+          name='message'
+          value={formState.message}
+          onChange={handleChange}
+          required
+        ></textarea>
+        <button id='button' type='submit'>
+          {buttonText}
+        </button>
+      </form>
+    </div>
   )
 }
 
