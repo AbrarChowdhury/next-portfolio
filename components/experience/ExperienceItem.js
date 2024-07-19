@@ -92,25 +92,7 @@ const ExperienceItem = ({
           ref={desginationRef}
         >
           <div style={{}}>
-            {/* <img
-              src='rect_back.svg'
-              style={{
-                position: "absolute",
-                left: "0",
-                top: "-10px",
-                width: `${desginationRef?.current?.width}px`,
-                height: `${desginationRef?.current?.height}px`,
-                zIndex: "-1",
-              }}
-            ></img> */}
-            <div
-              style={
-                {
-                  // background: "#abdcec",
-                  // padding: "10px",
-                }
-              }
-            >
+            <div>
               <h3 style={{ marginBottom: "5px", textTransform: "uppercase" }}>
                 {company}
               </h3>
