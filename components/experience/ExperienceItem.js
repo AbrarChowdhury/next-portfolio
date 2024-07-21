@@ -1,9 +1,11 @@
 import React, { useState, useRef, useEffect } from "react"
 import ProjectItem from "./ProjectItem"
+import LiveView from "../LiveView"
 
 const ExperienceItem = ({
   date,
   company,
+  companyURL,
   role,
   responsibilities,
   projects,
@@ -95,6 +97,7 @@ const ExperienceItem = ({
             <div>
               <h3 style={{ marginBottom: "5px", textTransform: "uppercase" }}>
                 {company}
+                <LiveView link={companyURL}/>
               </h3>
               <h2 style={{ marginTop: "0px" }}>{role}</h2>
               <p>{responsibilities}</p>

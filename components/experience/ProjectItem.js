@@ -1,4 +1,6 @@
 import { useState } from "react"
+import TechIcons from "../TechIcons"
+import SubProject from "../SubProject"
 
 const ProjectItem = ({
   imageSrc,
@@ -7,8 +9,9 @@ const ProjectItem = ({
   description,
   coreFeatures,
   clients,
+  iconList,
 }) => {
-  const [modal, setModal] = useState(false)
+  
   return (
     <div
       style={{
@@ -19,58 +22,15 @@ const ProjectItem = ({
       }}
     >
       {/* M O D A L */}
-      <div
-        style={{
-          position: "fixed",
-          left: "0",
-          top: "0",
-          height: "100%",
-          width: "100%",
-          zIndex: "5",
-          display: modal ? "flex" : "none",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <div
-          style={{
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            background: "rgba(255,255,255,0.9)",
-          }}
-          onClick={() => setModal(false)}
-        ></div>
-        <div
-          style={{
-            width: "50vw",
-            height: "50vh",
-            background: "url(rect_modal.svg)",
-            backgroundSize: "100% 100%",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            position: "relative",
-          }}
-        >
-          <img
-            src='cross.svg'
-            width='20px'
-            style={{ position: "absolute", right: "25px", top: "25px" }}
-            onClick={() => setModal(false)}
-          />
-          <div style={{ padding: "25px" }}>
-            <h1>{modal.imageAlt}</h1>
-          </div>
-        </div>
-      </div>
+      
       <div
         style={{
           // display: "flex",
           // alignItems: "center",
           background: "url(rect_back.svg)",
-            backgroundSize: "100% 100%",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
+          backgroundSize: "100% 100%",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
           padding: "20px",
         }}
       >
@@ -86,7 +46,7 @@ const ProjectItem = ({
           flexDirection: "column",
         }}
       >
-        <div className='tech-icons'></div>
+        <TechIcons iconList={iconList} />
         {coreFeatures && (
           <div>
             <p>Core Features:</p>
@@ -99,22 +59,9 @@ const ProjectItem = ({
         )}
         {clients && (
           <>
-            <p>The clients we have worked with:</p>
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
-              {clients.map((client, index) => (
-                <div
-                  key={index}
-                  style={{ border: "2px solid black", padding: "20px" }}
-                  onClick={() => setModal(client)}
-                >
-                  <img
-                    src={client.imageSrc}
-                    alt={client.imageAlt}
-                    width='100'
-                  />
-                </div>
-              ))}
-            </div>
+            {clients?.map((client) => (
+              <SubProject {...client} />
+            ))}
           </>
         )}
       </div>

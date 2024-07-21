@@ -1,13 +1,12 @@
-
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    color: #0f1b61;
-    background: #f4f9fc;
+  color: #0f1b61;
+  background: #f4f9fc;
 }
-h1{
+h1 {
   font-family: Bitter, serif;
 }
 
@@ -20,8 +19,25 @@ a {
   box-sizing: border-box;
 }
 
-h1{
-  font-family: 'Bitter', serif;
+h1 {
+  font-family: "Bitter", serif;
   font-size: 3rem;
   font-weight: 700;
+}
+
+.tech-icon:hover {
+  filter: grayscale(0%);
+}
+.tech-icon {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.tech-name {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.tech-item:hover .tech-name {
+  opacity: 1;
 }

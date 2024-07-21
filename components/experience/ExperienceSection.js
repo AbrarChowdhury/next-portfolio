@@ -1,5 +1,6 @@
 import styles from "./ExperienceSection.module.css"
 import ExperienceItem from "./ExperienceItem"
+import { hmsTechList, reflectTechList, virtyouTechList, vsmTechLists } from "../techIconList"
 
 const ExperienceSection = () => {
   return (
@@ -9,6 +10,7 @@ const ExperienceSection = () => {
         <ExperienceItem
           date='Now'
           company='Tech Dojo Ltd.'
+          companyURL='http://techdoo.com'
           role='Software Engineer'
           responsibilities='Responsibilities include designing and developing web applications, collaborating with cross-functional teams, and ensuring high performance and responsiveness of applications.'
           projects={[
@@ -18,17 +20,31 @@ const ExperienceSection = () => {
               title: "VirtYou",
               description:
                 "VirtYou specializes in creating automated emotion (AE) software for photorealistic 3D virtual actors. This technology enables virtual actors to deliver emotionally compelling, interactive, and live performances using AI-generated responses as a script.",
+              iconList: virtyouTechList,
               coreFeatures: [
                 "Procedurally generated natural expression based on context",
                 "Live procedural motion",
                 "Easy integration with any web service",
                 "Photoreal 3D characters",
               ],
-              clients: [
-                { imageSrc: "images/langara.svg", imageAlt: "Langara Logo" },
+              subProjects: [
+                { 
+                  imageSrc: "./images/virtyou.png", 
+                  imageAlt: "Langara Logo",
+                  logoSrc: "images/langara.svg", 
+                  logoAlt: "Langara Logo",
+                  title: "Langara",
+                  description:
+                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.', 
+                },
                 {
-                  imageSrc: "images/mindbloom.svg",
+                  imageSrc: "./images/virtyou.png",
                   imageAlt: "Mindbloom Logo",
+                  logoSrc: "images/mindbloom.svg",
+                  logoAlt: "Mindbloom Logo",
+                  title: "Mindbloom AI",
+                  description:
+                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.',
                 },
               ],
             },
@@ -38,7 +54,8 @@ const ExperienceSection = () => {
               title: "Reflect AI",
               description:
                 'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.',
-              coreFeatures: [
+              iconList: reflectTechList,
+                coreFeatures: [
                 "Live feedback on potentially harmful language",
                 "Seamless integration with email services",
                 "Real-time text analysis and feedback",
@@ -49,6 +66,7 @@ const ExperienceSection = () => {
         <ExperienceItem
           date='July 2023'
           company='Bioforge Health Systems'
+          companyURL='http://techdoo.com'
           role='Software Engineer'
           responsibilities='Responsibilities include developing software solutions for medical devices, collaborating with the product design team, and ensuring compliance with healthcare regulations.'
           projects={[
@@ -58,11 +76,32 @@ const ExperienceSection = () => {
               title: "Hospital Management System",
               description:
                 "The Hospital Management System (HMS) integrates various modules for managing hospital operations including discharge, lab, statistics, and appointments. It streamlines processes and enhances patient care.",
-              coreFeatures: [
+              iconList:hmsTechList,
+                coreFeatures: [
                 "Discharge Module",
                 "Lab Module",
                 "Statistics Module",
                 "Appointment Module",
+              ],
+              subProjects: [
+                { 
+                  imageSrc: "./images/virtyou.png", 
+                  imageAlt: "Langara Logo",
+                  logoSrc: "images/langara.svg", 
+                  logoAlt: "Langara Logo",
+                  title: "Discharge Module",
+                  description:
+                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.', 
+                },
+                {
+                  imageSrc: "./images/virtyou.png",
+                  imageAlt: "Mindbloom Logo",
+                  logoSrc: "images/mindbloom.svg",
+                  logoAlt: "Mindbloom Logo",
+                  title: "Discharge Module",
+                  description:
+                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.',
+                },
               ],
             },
             {
@@ -71,7 +110,8 @@ const ExperienceSection = () => {
               title: "Real-Time Vital Sign Monitor",
               description:
                 "A low-cost remote vital sign monitoring system designed for continuous and long-term monitoring of patients. It includes a wrist unit, bedside monitor, and a web-based GUI accessible by medical personnel remotely.",
-              coreFeatures: [
+              iconList:vsmTechLists,
+                coreFeatures: [
                 "Continuous and remote monitoring",
                 "Open source and low-cost hardware",
                 "Four-layer architecture: sensing, data processing, networking, and applications",
@@ -82,6 +122,7 @@ const ExperienceSection = () => {
         <ExperienceItem
           date='June 2020'
           company='Bioforge Health Systems'
+          companyURL='http://techdoo.com'
           role='Product Designer'
           responsibilities='Responsibilities include designing medical devices, creating prototypes, and collaborating with engineers to bring products to market.'
           projects={[
@@ -122,7 +163,7 @@ const ExperienceSection = () => {
             <p
               style={{
                 marginLeft: "55px",
-                marginTop:"0px",
+                marginTop: "0px",
                 paddingTop: "15px",
                 fontSize: "2em",
               }}
