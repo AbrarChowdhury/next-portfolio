@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import LiveView from "../LiveView"
+import TechIcons from "../TechIcons"
 
 const SubProject = ({
   imageSrc,
@@ -10,6 +11,7 @@ const SubProject = ({
   title,
   shortDesc,
   description,
+  iconList
 }) => {
   const [modal, setModal] = useState(false)
   return (
@@ -68,6 +70,8 @@ const SubProject = ({
                 </div>
                 {!logoSrc && <h2>{title}</h2>}
                 <p style={{ margin: 0, fontSize: "smaller" }}>{description}</p>
+                <br />
+                <TechIcons iconList={iconList}/>
               </div>
             </div>
           </div>

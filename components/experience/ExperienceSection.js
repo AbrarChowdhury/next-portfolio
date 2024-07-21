@@ -1,6 +1,11 @@
 import styles from "./ExperienceSection.module.css"
 import ExperienceItem from "./ExperienceItem"
-import { hmsTechList, reflectTechList, virtyouTechList, vsmTechLists } from "../techIconList"
+import {
+  hmsTechList,
+  reflectTechList,
+  virtyouTechList,
+  vsmTechLists,
+} from "../techIconList"
 
 const ExperienceSection = () => {
   return (
@@ -28,25 +33,27 @@ const ExperienceSection = () => {
                 "Photoreal 3D characters",
               ],
               subProjects: [
-                { 
-                  imageSrc: "./images/virtyou.png", 
+                {
+                  imageSrc: "./images/virtyou.png",
                   imageAlt: "Langara Logo",
-                  logoSrc: "images/langara.svg", 
+                  logoSrc: "images/langara.svg",
                   logoAlt: "Langara Logo",
-                  companyURL:"https://www.langara.com/",
+                  companyURL: "https://www.langara.com/",
                   title: "Langara",
-                  shortDesc:"Educational VR APP",
+                  iconList: virtyouTechList,
+                  shortDesc: "Educational VR APP",
                   description:
-                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.', 
+                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.',
                 },
                 {
                   imageSrc: "./images/virtyou.png",
                   imageAlt: "Mindbloom Logo",
                   logoSrc: "images/mindbloom.svg",
                   logoAlt: "Mindbloom Logo",
-                  companyURL:"https://www.mindbloom.com/",
+                  companyURL: "https://www.mindbloom.com/",
                   title: "Mindbloom AI",
-                  shortDesc:"Employee training app",
+                  iconList: virtyouTechList,
+                  shortDesc: "Employee training app",
                   description:
                     'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.',
                 },
@@ -59,7 +66,7 @@ const ExperienceSection = () => {
               description:
                 'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.',
               iconList: reflectTechList,
-                coreFeatures: [
+              coreFeatures: [
                 "Live feedback on potentially harmful language",
                 "Seamless integration with email services",
                 "Real-time text analysis and feedback",
@@ -80,47 +87,50 @@ const ExperienceSection = () => {
               title: "Hospital Management System",
               description:
                 "The Hospital Management System (HMS) integrates various modules for managing hospital operations including discharge, lab, statistics, and appointments. It streamlines processes and enhances patient care.",
-              iconList:hmsTechList,
-                coreFeatures: [
+              iconList: hmsTechList,
+              coreFeatures: [
                 "Discharge Module",
                 "Lab Module",
                 "Statistics Module",
                 "Appointment Module",
               ],
               subProjects: [
-                { 
-                  imageSrc: "./images/virtyou.png", 
+                {
+                  imageSrc: "./images/virtyou.png",
                   imageAlt: "Langara Logo",
                   title: "Discharge Module",
-                  shortDesc:"Web-App: simplyf patient discharges",
+                  shortDesc: "Web-App: simplyf patient discharges",
+                  iconList: virtyouTechList,
                   description:
-                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.', 
+                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.',
                 },
-                { 
-                  imageSrc: "./images/virtyou.png", 
+                {
+                  imageSrc: "./images/virtyou.png",
                   imageAlt: "Langara Logo",
                   title: "Lab Module",
-                  shortDesc:"Lab Module",
+                  shortDesc: "Lab Module",
+                  iconList: virtyouTechList,
                   description:
-                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.', 
+                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.',
                 },
-                { 
-                  imageSrc: "./images/virtyou.png", 
+                {
+                  imageSrc: "./images/virtyou.png",
                   imageAlt: "Langara Logo",
                   title: "Statistics Module",
-                  shortDesc:"Statistics",
+                  shortDesc: "Statistics",
+                  iconList: virtyouTechList,
                   description:
-                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.', 
+                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.',
                 },
-                { 
-                  imageSrc: "./images/virtyou.png", 
+                {
+                  imageSrc: "./images/virtyou.png",
                   imageAlt: "Langara Logo",
                   title: "Appointment Module",
-                  shortDesc:"Appointment",
+                  shortDesc: "Appointment",
+                  iconList: virtyouTechList,
                   description:
-                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.', 
+                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.',
                 },
-
               ],
             },
             {
@@ -129,8 +139,8 @@ const ExperienceSection = () => {
               title: "Real-Time Vital Sign Monitor",
               description:
                 "A low-cost remote vital sign monitoring system designed for continuous and long-term monitoring of patients. It includes a wrist unit, bedside monitor, and a web-based GUI accessible by medical personnel remotely.",
-              iconList:vsmTechLists,
-                coreFeatures: [
+              iconList: vsmTechLists,
+              coreFeatures: [
                 "Continuous and remote monitoring",
                 "Open source and low-cost hardware",
                 "Four-layer architecture: sensing, data processing, networking, and applications",
