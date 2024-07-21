@@ -25,6 +25,9 @@ h1 {
   font-weight: 700;
 }
 
+.pointer:hover {
+  cursor: pointer;
+}
 .tech-icon:hover {
   filter: grayscale(0%);
 }

@@ -33,7 +33,9 @@ const ExperienceSection = () => {
                   imageAlt: "Langara Logo",
                   logoSrc: "images/langara.svg", 
                   logoAlt: "Langara Logo",
+                  companyURL:"https://www.langara.com/",
                   title: "Langara",
+                  shortDesc:"Educational VR APP",
                   description:
                     'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.', 
                 },
@@ -42,7 +44,9 @@ const ExperienceSection = () => {
                   imageAlt: "Mindbloom Logo",
                   logoSrc: "images/mindbloom.svg",
                   logoAlt: "Mindbloom Logo",
+                  companyURL:"https://www.mindbloom.com/",
                   title: "Mindbloom AI",
+                  shortDesc:"Employee training app",
                   description:
                     'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.',
                 },
@@ -87,21 +91,36 @@ const ExperienceSection = () => {
                 { 
                   imageSrc: "./images/virtyou.png", 
                   imageAlt: "Langara Logo",
-                  logoSrc: "images/langara.svg", 
-                  logoAlt: "Langara Logo",
                   title: "Discharge Module",
+                  shortDesc:"Web-App: simplyf patient discharges",
                   description:
                     'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.', 
                 },
-                {
-                  imageSrc: "./images/virtyou.png",
-                  imageAlt: "Mindbloom Logo",
-                  logoSrc: "images/mindbloom.svg",
-                  logoAlt: "Mindbloom Logo",
-                  title: "Discharge Module",
+                { 
+                  imageSrc: "./images/virtyou.png", 
+                  imageAlt: "Langara Logo",
+                  title: "Lab Module",
+                  shortDesc:"Lab Module",
                   description:
-                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.',
+                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.', 
                 },
+                { 
+                  imageSrc: "./images/virtyou.png", 
+                  imageAlt: "Langara Logo",
+                  title: "Statistics Module",
+                  shortDesc:"Statistics",
+                  description:
+                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.', 
+                },
+                { 
+                  imageSrc: "./images/virtyou.png", 
+                  imageAlt: "Langara Logo",
+                  title: "Appointment Module",
+                  shortDesc:"Appointment",
+                  description:
+                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.', 
+                },
+
               ],
             },
             {

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import TechIcons from "../TechIcons"
-import SubProject from "../SubProject"
+import SubProject from "./SubProject"
 
 const ProjectItem = ({
   imageSrc,
@@ -8,10 +8,9 @@ const ProjectItem = ({
   title,
   description,
   coreFeatures,
-  clients,
+  subProjects,
   iconList,
 }) => {
-  
   return (
     <div
       style={{
@@ -21,12 +20,8 @@ const ProjectItem = ({
         margin: "40px 0",
       }}
     >
-      {/* M O D A L */}
-      
       <div
         style={{
-          // display: "flex",
-          // alignItems: "center",
           background: "url(rect_back.svg)",
           backgroundSize: "100% 100%",
           backgroundRepeat: "no-repeat",
@@ -57,12 +52,12 @@ const ProjectItem = ({
             </ul>
           </div>
         )}
-        {clients && (
-          <>
-            {clients?.map((client) => (
-              <SubProject {...client} />
+        {subProjects && (
+          <div style={{display:"flex", flexWrap:"wrap"}}>
+            {subProjects?.map((subProject) => (
+              <SubProject {...subProject} />
             ))}
-          </>
+          </div>
         )}
       </div>
     </div>

@@ -1,9 +1,19 @@
 import React, { useState } from "react"
+import LiveView from "../LiveView"
 
-const SubProject = ({ imageSrc, imageAlt, ...rest }) => {
+const SubProject = ({
+  imageSrc,
+  imageAlt,
+  logoSrc,
+  logoAlt,
+  companyURL,
+  title,
+  shortDesc,
+  description,
+}) => {
   const [modal, setModal] = useState(false)
   return (
-    <div>
+    <div class='pointer' style={{ maxWidth: "50%" }}>
       <div
         style={{
           position: "fixed",
@@ -29,7 +39,6 @@ const SubProject = ({ imageSrc, imageAlt, ...rest }) => {
         <div
           style={{
             width: "50vw",
-            height: "50vh",
             background: "url(rect_modal.svg)",
             backgroundSize: "100% 100%",
             backgroundRepeat: "no-repeat",
@@ -44,7 +53,23 @@ const SubProject = ({ imageSrc, imageAlt, ...rest }) => {
             onClick={() => setModal(false)}
           />
           <div style={{ padding: "25px" }}>
-            <h1>{modal.imageAlt}</h1>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gridGap: "10px",
+              }}
+            >
+              <img src={imageSrc} alt={imageAlt} width='100%' />
+              <div>
+                <div style={{display:"flex", alignItems:"center"}}>
+                {logoSrc && <img src={logoSrc} alt={logoAlt} width='200' />}
+                {companyURL&&<LiveView link={companyURL} size="30"/>}
+                </div>
+                {!logoSrc && <h2>{title}</h2>}
+                <p style={{ margin: 0, fontSize: "smaller" }}>{description}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -56,14 +81,18 @@ const SubProject = ({ imageSrc, imageAlt, ...rest }) => {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
-        onClick={() => setModal(rest)}
+        onClick={() => setModal(true)}
       >
-        <div style={{display:"grid", gridTemplateColumns:"1fr 1fr"}}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
           <img src={imageSrc} alt={imageAlt} width='100' />
           <div>
-            <img src={imageSrc} alt={imageAlt} width='100' />
+            {logoSrc && <img src={logoSrc} alt={logoAlt} width='100' />}
+            <p style={{ margin: 0, paddingLeft: "5px", fontSize: "smaller" }}>
+              {title}
+            </p>
           </div>
         </div>
+        <p style={{ margin: 0, fontSize: "smaller" }}>{shortDesc}</p>
       </div>
     </div>
   )
