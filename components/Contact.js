@@ -40,46 +40,57 @@ const ContactForm = () => {
   }
 
   return (
-    <div
-      style={{
-        position: 'relative',
-        minHeight:"600px"
-      }}
-    >
-      <img src="mail.svg" width="600vw" style={{
-        position: 'absolute',
-      }}/>
-      <form id='contact-form' onSubmit={handleSubmit}>
-        <label htmlFor='from_name'>Name:</label>
-        <input
-          type='text'
-          id='name'
-          name='from_name'
-          value={formState.from_name}
-          onChange={handleChange}
-          required
-        />
-        <label htmlFor='from_email'>Email:</label>
-        <input
-          type='email'
-          id='from_email'
-          name='from_email'
-          value={formState.from_email}
-          onChange={handleChange}
-          required
-        />
-        <label htmlFor='message'>Message:</label>
-        <textarea
-          id='message'
-          name='message'
-          value={formState.message}
-          onChange={handleChange}
-          required
-        ></textarea>
-        <button id='button' type='submit'>
-          {buttonText}
-        </button>
-      </form>
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <div
+        style={{
+          position: "relative",
+          minHeight: "80vh",
+          width: "max-content",
+        }}
+      >
+        <img src='mail.svg' width='600vw' />
+        <form
+          id='contact-form'
+          onSubmit={handleSubmit}
+          style={{
+            position: "absolute",
+            top: "10vh",
+            left: "10vh",
+          }}
+        >
+          <label htmlFor='from_name'>Name:</label>
+          <input
+            type='text'
+            id='name'
+            name='from_name'
+            value={formState.from_name}
+            onChange={handleChange}
+            required
+          />
+          <br />
+          <label htmlFor='from_email'>Email:</label>
+          <input
+            type='email'
+            id='from_email'
+            name='from_email'
+            value={formState.from_email}
+            onChange={handleChange}
+            required
+          />
+          <br />
+          <label htmlFor='message'>Message:</label>
+          <textarea
+            id='message'
+            name='message'
+            value={formState.message}
+            onChange={handleChange}
+            required
+          ></textarea>
+          <button id='button' type='submit'>
+            {buttonText}
+          </button>
+        </form>
+      </div>
     </div>
   )
 }
