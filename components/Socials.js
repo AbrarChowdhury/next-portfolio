@@ -7,7 +7,7 @@ const Socials = () => {
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
-        minWidth:"250px"
+        width: "250px",
       }}
     >
       <Social src='socials/github.svg' href='www.hoglu.com' />

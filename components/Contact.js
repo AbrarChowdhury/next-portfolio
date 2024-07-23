@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import emailjs from "@emailjs/browser"
+import Socials from "./Socials"
 
 const ContactForm = () => {
   const [formState, setFormState] = useState({
@@ -49,6 +50,9 @@ const ContactForm = () => {
         }}
       >
         <img src='mail.svg' width='600vw' />
+        <div style={{ display: "flex", justifyContent: "center", marginTop:"-50px" }}>
+          <Socials />
+        </div>
         <form
           id='contact-form'
           onSubmit={handleSubmit}

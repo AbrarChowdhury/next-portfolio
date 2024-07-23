@@ -90,9 +90,9 @@ export default function Home() {
       </main>
       <ContactForm />
 
-      <footer className={styles.footer}>
+      {/* <footer className={styles.footer}>
         <Socials />
-      </footer>
+      </footer> */}
     </div>
   )
 }
