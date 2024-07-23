@@ -1,14 +1,13 @@
 import Head from "next/head"
-import Image from "next/image"
 import styles from "../styles/Home.module.css"
 
-import { AiFillGithub, AiFillCodepenCircle } from "react-icons/ai"
 import MyAvatar from "../components/MyAvatar"
 import { useEffect, useRef, useState } from "react"
 import About from "../components/About"
 import Projects from "../components/Projects"
 import ExperienceSection from "../components/experience/ExperienceSection"
 import ContactForm from "../components/Contact"
+import Socials from "../components/Socials"
 export default function Home() {
   const ref = useRef()
   const scrollRef = useRef()
@@ -89,14 +88,10 @@ export default function Home() {
           <h1 className='title'>Get In Touch</h1>
         </section>
       </main>
-      <ContactForm/>
+      <ContactForm />
+
       <footer className={styles.footer}>
-        <a href='https://github.com/AbrarChowdhury'>
-          <AiFillGithub />
-        </a>
-        <a href='https://codepen.io/abrar-shams-chowdhury'>
-          <AiFillCodepenCircle />
-        </a>
+        <Socials />
       </footer>
     </div>
   )
