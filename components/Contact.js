@@ -49,8 +49,14 @@ const ContactForm = () => {
           width: "max-content",
         }}
       >
-        <img src='mail.svg' width='600vw' />
-        <div style={{ display: "flex", justifyContent: "center", marginTop:"-50px" }}>
+        <img src='email_to.svg' width='600vw' />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "-50px",
+          }}
+        >
           <Socials />
         </div>
         <form
@@ -58,11 +64,16 @@ const ContactForm = () => {
           onSubmit={handleSubmit}
           style={{
             position: "absolute",
-            top: "10vh",
-            left: "10vh",
+            top: "0",
+            padding: "10vh",
+            width: "100%",
           }}
         >
-          <label htmlFor='from_name'>Name:</label>
+          <img
+            src='email_from.svg'
+            height={"15"}
+            style={{ marginRight: "10px", marginBottom: "-3px" }}
+          />
           <input
             type='text'
             id='name'
@@ -71,18 +82,41 @@ const ContactForm = () => {
             onChange={handleChange}
             required
           />
-          <br />
-          <label htmlFor='from_email'>Email:</label>
-          <input
-            type='email'
-            id='from_email'
-            name='from_email'
-            value={formState.from_email}
-            onChange={handleChange}
-            required
+          <div
+            id='button'
+            type='submit'
+            style={{
+              background: "url(email_send.svg)",
+              backgroundSize: "100% 100%",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              display: "inline",
+              float: "right",
+              width: "30px",
+              height: "30px",
+            }}
+          ></div>
+          <div style={{ marginTop: "10px", marginBottom: "20px" }}>
+            <img
+              src='email_email.svg'
+              height={"15"}
+              style={{ marginRight: "10px", marginBottom: "-3px" }}
+            />
+            <input
+              type='email'
+              id='from_email'
+              name='from_email'
+              value={formState.from_email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <img
+            src='email_dear.svg'
+            height={"20"}
+            style={{ marginRight: "10px", marginBottom: "-3px" }}
           />
-          <br />
-          <label htmlFor='message'>Message:</label>
           <textarea
             id='message'
             name='message'
@@ -90,9 +124,6 @@ const ContactForm = () => {
             onChange={handleChange}
             required
           ></textarea>
-          <button id='button' type='submit'>
-            {buttonText}
-          </button>
         </form>
       </div>
     </div>

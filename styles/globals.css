@@ -44,3 +44,55 @@ h1 {
 .tech-item:hover .tech-name {
   opacity: 1;
 }
+
+ {
+  /* 
+background-color: field;
+column-count: initial !important;
+margin: 0em;
+border-width: 1px;
+border-style: solid;
+border-color: light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+border-image: initial;
+padding: 2px;
+white-space: pre-wrap; 
+*/
+}
+
+textarea,
+input {
+  border: none;
+  background: none;
+  border-image: "./hor_line.svg";
+}
+textarea {
+  width: 100%;
+}
+textarea,
+input:focus-visible {
+  border: none;
+  background: none;
+  background-color: none;
+  outline: none;
+}
+#button:hover {
+  cursor: pointer;
+}
+/* textarea,
+input:active{
+  border: none;
+  background: none;
+  background:red
+}
+
+input:enabled{
+  border: none;
+  background: none;
+  background:red
+}
+
+input:focus-within{
+  border: none;
+  background: none;
+  background:red
+} */
