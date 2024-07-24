@@ -49,8 +49,8 @@ const ProjectItem = ({
         )}
         {subProjects && (
           <div style={{display:"flex", flexWrap:"wrap"}}>
-            {subProjects?.map((subProject) => (
-              <SubProject {...subProject} />
+            {subProjects?.map((subProject,i) => (
+              <SubProject key={i} {...subProject} />
             ))}
           </div>
         )}

@@ -21,7 +21,7 @@ const Socials = () => {
 
 function Social({ src, href }) {
   return (
-    <a href={href} target='_blank'>
+    <a href={href} target='_blank'  rel="noreferrer" >
       <img
         src={src}
         width={"25px"}

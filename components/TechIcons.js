@@ -2,14 +2,15 @@ import React from "react"
 
 const TechIcons = ({ iconList }) => {
   return (
-    <div class='tech' style={{ display: "flex", maxWidth: "100%" }}>
-      {iconList?.map(({ href, src, alt, name }) => (
+    <div className='tech' style={{ display: "flex", maxWidth: "100%" }}>
+      {iconList?.map(({ href, src, alt, name },i) => (
         <div
-          class='tech-item'
+          key={i}
+          className='tech-item'
           style={{ position: "relative", margin: "0 5px", textAlign: "center" }}
         >
           <span
-            class='tech-name'
+            className='tech-name'
             style={{
               position: "absolute",
               bottom: "100%",
@@ -23,11 +24,11 @@ const TechIcons = ({ iconList }) => {
           >
             {name}
           </span>
-          <a href={href} target='_blank'>
+          <a href={href} target='_blank' rel="noreferrer" >
             <img
               src={src}
               alt={alt}
-              class='tech-icon'
+              className='tech-icon'
               style={{
                 width: "auto",
                 height: "50px",

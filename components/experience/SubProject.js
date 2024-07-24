@@ -15,7 +15,7 @@ const SubProject = ({
 }) => {
   const [modal, setModal] = useState(false)
   return (
-    <div class='pointer' style={{ maxWidth: "50%" }}>
+    <div className='pointer' style={{ maxWidth: "50%" }}>
       <div
         style={{
           position: "fixed",
