@@ -5,7 +5,7 @@ const Projects = () => {
   return (
     <section id="portfolio">
       <h1 className="title">Projects</h1>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "20px" }}>
+      <div className="petProjectContainer" >
         {projectsData.map((project, i) => (
           <Cards key={i} project={project} />
         ))}

@@ -36,7 +36,7 @@ const ExperienceItem = ({
         width='60px'
         style={{ position: "absolute", left: "-32.5px" }}
       />
-      <div style={{ display: "flex" }}>
+      <div className='companyDetailContainer'>
         <div
           style={{
             flex: 1,
@@ -49,6 +49,7 @@ const ExperienceItem = ({
           <div>
             <span style={{ marginLeft: "55px", fontSize: "2em" }}>{date}</span>
             <img
+              className="jobArrow"
               style={{ display: "inline", width: "100px", marginLeft: "10px" }}
               src='arrow.svg'
             />
@@ -80,16 +81,9 @@ const ExperienceItem = ({
         </div>
 
         <div
+          className='companyDetails'
           style={{
-            flex: 1,
-            marginTop: "10px",
-            padding: "0 50px",
-            background: "url(rect_back.svg)",
-            backgroundSize: "90% 100%",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            width: "100%",
-            height: "100%",
+            background: "url(./rect_back.svg)"
           }}
           ref={desginationRef}
           onClick={toggleCollapse}
@@ -98,7 +92,7 @@ const ExperienceItem = ({
             <div>
               <h3 style={{ marginBottom: "5px", textTransform: "uppercase" }}>
                 {company}
-                <LiveView link={companyURL}/>
+                <LiveView link={companyURL} />
               </h3>
               <h2 style={{ marginTop: "0px" }}>{role}</h2>
               <p>{responsibilities}</p>

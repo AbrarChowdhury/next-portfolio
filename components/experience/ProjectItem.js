@@ -13,12 +13,7 @@ const ProjectItem = ({
 }) => {
   return (
     <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        gridGap: "10px",
-        margin: "40px 0",
-      }}
+      className="projectsContainer"
     >
       <div
         style={{

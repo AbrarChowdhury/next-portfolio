@@ -90,7 +90,7 @@ const SubProject = ({
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
           <img src={imageSrc} alt={imageAlt} width='100' />
           <div>
-            {logoSrc && <img src={logoSrc} alt={logoAlt} width='100' />}
+            {logoSrc && <img src={logoSrc} alt={logoAlt} width='100%' />}
             <p style={{ margin: 0, paddingLeft: "5px", fontSize: "smaller" }}>
               {title}
             </p>

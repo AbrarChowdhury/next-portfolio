@@ -22,7 +22,7 @@
   flex-grow: 0;
 }
 #hero h1 {
-  font-family: 'Bitter', serif;
+  /* font-family: 'Bitter', serif; */
   font-size: 3rem;
   font-weight: 400;
   text-align: center;
