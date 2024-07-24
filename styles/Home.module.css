@@ -22,7 +22,6 @@
   flex-grow: 0;
 }
 #hero h1 {
-  /* font-family: 'Bitter', serif; */
   font-size: 3rem;
   font-weight: 400;
   text-align: center;
@@ -155,15 +154,4 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
-}
+

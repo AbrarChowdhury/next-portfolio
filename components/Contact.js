@@ -45,11 +45,17 @@ const ContactForm = () => {
       <div
         style={{
           position: "relative",
-          minHeight: "80vh",
-          width: "max-content",
+          minHeight: "",
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
         }}
       >
-        <img src='email_to.svg' width='600vw' />
+        <img
+          src='email_to.svg'
+          style={{ maxWidth: "600px", margin: "0 auto" }}
+        />
         <div
           style={{
             display: "flex",
@@ -59,72 +65,81 @@ const ContactForm = () => {
         >
           <Socials />
         </div>
-        <form
-          id='contact-form'
-          onSubmit={handleSubmit}
+        <div
           style={{
             position: "absolute",
             top: "0",
-            padding: "10vh",
+            display: "flex",
+            justifyContent: "center",
             width: "100%",
           }}
         >
-          <img
-            src='email_from.svg'
-            height={"15"}
-            style={{ marginRight: "10px", marginBottom: "-3px" }}
-          />
-          <input
-            type='text'
-            id='name'
-            name='from_name'
-            value={formState.from_name}
-            onChange={handleChange}
-            required
-          />
-          <div
-            id='button'
-            type='submit'
+          <form
+            id='contact-form'
+            onSubmit={handleSubmit}
             style={{
-              background: "url(email_send.svg)",
-              backgroundSize: "100% 100%",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              display: "inline",
-              float: "right",
-              width: "30px",
-              height: "30px",
+              padding: "10vh",
+              width: "100%",
+              maxWidth: "600px",
             }}
-          ></div>
-          <div style={{ marginTop: "10px", marginBottom: "20px" }}>
+          >
             <img
-              src='email_email.svg'
+              src='email_from.svg'
               height={"15"}
               style={{ marginRight: "10px", marginBottom: "-3px" }}
             />
             <input
-              type='email'
-              id='from_email'
-              name='from_email'
-              value={formState.from_email}
+              type='text'
+              id='name'
+              name='from_name'
+              value={formState.from_name}
               onChange={handleChange}
               required
             />
-          </div>
+            <div
+              id='button'
+              type='submit'
+              style={{
+                background: "url(email_send.svg)",
+                backgroundSize: "100% 100%",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                display: "inline",
+                float: "right",
+                width: "30px",
+                height: "30px",
+              }}
+            ></div>
+            <div style={{ marginTop: "10px", marginBottom: "20px" }}>
+              <img
+                src='email_email.svg'
+                height={"15"}
+                style={{ marginRight: "10px", marginBottom: "-3px" }}
+              />
+              <input
+                type='email'
+                id='from_email'
+                name='from_email'
+                value={formState.from_email}
+                onChange={handleChange}
+                required
+              />
+            </div>
 
-          <img
-            src='email_dear.svg'
-            height={"20"}
-            style={{ marginRight: "10px", marginBottom: "-3px" }}
-          />
-          <textarea
-            id='message'
-            name='message'
-            value={formState.message}
-            onChange={handleChange}
-            required
-          ></textarea>
-        </form>
+            <img
+              src='email_dear.svg'
+              height={"20"}
+              style={{ marginRight: "10px", marginBottom: "-3px" }}
+            />
+            <textarea
+              id='message'
+              name='message'
+              value={formState.message}
+              onChange={handleChange}
+              required
+            ></textarea>
+          </form>
+        </div>
       </div>
     </div>
   )
