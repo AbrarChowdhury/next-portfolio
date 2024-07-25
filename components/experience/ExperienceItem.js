@@ -69,7 +69,7 @@ const ExperienceItem = ({
             background: "url(./rect_back.svg)",
           }}
           ref={desginationRef}
-          onClick={toggleCollapse}
+          // onClick={toggleCollapse}
         >
           <div >
             <div>
