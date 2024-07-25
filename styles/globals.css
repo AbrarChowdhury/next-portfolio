@@ -69,6 +69,7 @@ a {
   position: relative;
   border-bottom: 5px solid #abdcec;
   border-left: 5px solid #abdcec;
+  padding-bottom: 10px;
 }
 .lastClockContainer {
   position: relative;

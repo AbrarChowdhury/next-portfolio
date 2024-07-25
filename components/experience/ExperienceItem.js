@@ -24,7 +24,9 @@ const ExperienceItem = ({
   }, [isCollapsed])
 
   return (
-    <div className='experienceContainer' style={{ borderImage: "url(hor_line.svg) 23 round"}}>
+    <div className='experienceContainer' 
+    // style={{ borderImage: "url(hor_line.svg) 19 round"}}
+    >
       <img
         src={date == "Now" ? "clock_start.svg" : "clock.svg"}
         width='60px'
