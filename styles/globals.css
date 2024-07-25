@@ -52,6 +52,11 @@ a {
   padding: 2rem 10%;
 }
 
+.aboutFont {
+  font-size: 1.5em;
+  text-align: center;
+}
+
 /* EXPERIENCE */
 .experienceContainer {
   position: relative;
@@ -172,8 +177,13 @@ input:focus-visible {
   body {
     text-align: center;
   }
+
   .main {
     padding: 1rem 10px !important;
+  }
+  .aboutFont {
+    font-size: 1.1em;
+    text-align: justify;
   }
   /* h2{
     text-align: center;

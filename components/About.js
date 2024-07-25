@@ -6,7 +6,7 @@ const About = () => {
     <div className={styles.about}>
       <h1>About Me</h1>
       <div style={{ display: "flex" }}>
-        <p style={{ fontSize: "1.5em", textAlign: "center" }}>
+        <p className="aboutFont">
           I see my work as an art form, with programming as my tool. My
           inspiration comes from all areas of my life, like using soccer
           strategies to tackle coding challenges. This creative mindset,
