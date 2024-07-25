@@ -1,11 +1,11 @@
 
 const projectsData = [
-  {
-    title: "Vital Sign Monitor",
-    link: "https://beaded-myth-3fa.notion.site/Vital-Sign-Monitor-dd9a1f4e20a84cbb98c494983e1b3445",
-    desc: "A Cost-Effective Solution for Real-Time Remote Monitoring of Vital Signs in Patients",
-    imageUrl: "/images/projectSS/vsm.jpg",
-  },
+  // {
+  //   title: "Vital Sign Monitor",
+  //   link: "https://beaded-myth-3fa.notion.site/Vital-Sign-Monitor-dd9a1f4e20a84cbb98c494983e1b3445",
+  //   desc: "A Cost-Effective Solution for Real-Time Remote Monitoring of Vital Signs in Patients",
+  //   imageUrl: "/images/projectSS/vsm.jpg",
+  // },
   {
     title: "Mark Down Playground",
     link: "https://markdown-playground.netlify.app/",

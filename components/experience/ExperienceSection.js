@@ -15,7 +15,7 @@ const ExperienceSection = () => {
         <ExperienceItem
           date='Now'
           company='Tech Dojo Ltd.'
-          companyURL='http://techdoo.com'
+          companyURL='https://www.tech-dojo.org/'
           role='Software Engineer'
           responsibilities='Responsibilities include designing and developing web applications, collaborating with cross-functional teams, and ensuring high performance and responsiveness of applications.'
           projects={[
@@ -23,6 +23,7 @@ const ExperienceSection = () => {
               imageSrc: "./images/virtyou.png",
               imageAlt: "VirtYou Logo",
               title: "VirtYou",
+              url:"https://virtyou.com/",
               description:
                 "VirtYou specializes in creating automated emotion (AE) software for photorealistic 3D virtual actors. This technology enables virtual actors to deliver emotionally compelling, interactive, and live performances using AI-generated responses as a script.",
               iconList: virtyouTechList,
@@ -38,7 +39,7 @@ const ExperienceSection = () => {
                   imageAlt: "Langara Logo",
                   logoSrc: "images/langara.svg",
                   logoAlt: "Langara Logo",
-                  companyURL: "https://www.langara.com/",
+                  companyURL: "https://langara.ca/",
                   title: "Langara",
                   iconList: virtyouTechList,
                   shortDesc: "Educational VR APP",
@@ -50,7 +51,7 @@ const ExperienceSection = () => {
                   imageAlt: "Mindbloom Logo",
                   logoSrc: "images/mindbloom.svg",
                   logoAlt: "Mindbloom Logo",
-                  companyURL: "https://www.mindbloom.com/",
+                  companyURL: "https://www.mindbloom.ai/",
                   title: "Mindbloom AI",
                   iconList: virtyouTechList,
                   shortDesc: "Employee training app",
@@ -63,6 +64,7 @@ const ExperienceSection = () => {
               imageSrc: "./images/reflect.png",
               imageAlt: "Reflect AI screen-shot",
               title: "Reflect AI",
+              url:"https://www.alphyco.com/",
               description:
                 'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.',
               iconList: reflectTechList,
@@ -77,7 +79,7 @@ const ExperienceSection = () => {
         <ExperienceItem
           date='July 2023'
           company='Bioforge Health Systems'
-          companyURL='http://techdoo.com'
+          companyURL='https://www.bioforgehealth.org/'
           role='Software Engineer'
           responsibilities='Responsibilities include developing software solutions for medical devices, collaborating with the product design team, and ensuring compliance with healthcare regulations.'
           projects={[
@@ -151,7 +153,7 @@ const ExperienceSection = () => {
         <ExperienceItem
           date='June 2020'
           company='Bioforge Health Systems'
-          companyURL='http://techdoo.com'
+          companyURL='https://www.bioforgehealth.org/'
           role='Product Designer'
           responsibilities='Responsibilities include designing medical devices, creating prototypes, and collaborating with engineers to bring products to market.'
           projects={[
