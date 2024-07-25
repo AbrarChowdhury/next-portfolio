@@ -16,12 +16,13 @@ const ProjectItem = ({
       className="projectsContainer"
     >
       <div
+       className="projectMain"
         style={{
           background: "url(rect_back.svg)",
           backgroundSize: "100% 100%",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
-          padding: "20px",
+
         }}
       >
         <h2>{title}</h2>
@@ -34,6 +35,9 @@ const ProjectItem = ({
           justifyContent: "center",
           alignItems: "center",
           flexDirection: "column",
+          overflow:"hidden",
+          width:"90%",
+          margin:"0 auto"
         }}
       >
         <TechIcons iconList={iconList} />

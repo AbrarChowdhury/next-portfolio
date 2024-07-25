@@ -2,7 +2,7 @@ import React from "react"
 
 const TechIcons = ({ iconList }) => {
   return (
-    <div className='tech' style={{ display: "flex", maxWidth: "100%" }}>
+    <div className='tech' style={{ display: "flex", maxWidth: "100%", overflow:"hidden" }}>
       {iconList?.map(({ href, src, alt, name },i) => (
         <div
           key={i}

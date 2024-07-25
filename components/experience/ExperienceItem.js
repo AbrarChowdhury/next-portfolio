@@ -98,7 +98,6 @@ const ExperienceItem = ({
         style={{
           height: height,
           overflow: "hidden",
-          padding: "0px 55px",
           background: "url(sub_proj.svg)",
           backgroundSize: "100% 100%",
           backgroundRepeat: "no-repeat",

@@ -82,7 +82,7 @@ input:focus-visible {
 }
 @container cDetailContainer (max-width: 350px) {
   .companyDetails {
-    padding: 0 15px!important;
+    padding: 0 15px !important;
     background: red;
   }
 }
@@ -94,12 +94,7 @@ input:focus-visible {
   justify-content: center;
   padding: 15px;
 }
-.projectsContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
-  margin: 40px 0;
-}
+
 .companyDetails {
   flex: 1;
   margin-top: 10px;
@@ -109,6 +104,17 @@ input:focus-visible {
   background-position: center;
   width: 100%;
   height: 100%;
+}
+/* MAIN PROJECTS */
+.projectsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin: 40px 20px;
+}
+.projectMain {
+  padding: 20px;
+  width: 100%;
 }
 
 /* PET PROJECTS */
@@ -125,6 +131,19 @@ input:focus-visible {
   }
 }
 @media (max-width: 600px) {
+  /* MAIN PROJECTS */
+  .projectsContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    /* margin: 40px 0; */
+  }
+  .projectMain {
+    padding: 5px;
+    width: 90%;
+    margin: 0px 5%;
+  }
+
   .petProjectContainer {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -157,4 +176,3 @@ input:focus-visible {
     grid-template-columns: 1fr;
   }
 }
-
