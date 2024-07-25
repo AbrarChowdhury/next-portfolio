@@ -1,3 +1,5 @@
+/* GENERAL */
+
 @font-face {
   font-family: "PPGoshaSans";
   src: url("../public/fonts/PPGoshaSans-Regular.woff2") format("opentype");
@@ -21,6 +23,14 @@ body {
   background: #f4f9fc;
 }
 
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  transition: letter-spacing 0.3s ease;
+}
+h1:hover {
+  letter-spacing: 2px; /* Increase the space between letters on hover */
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -30,49 +40,16 @@ a {
   box-sizing: border-box;
 }
 
-h1 {
-  font-size: 3rem;
-  font-weight: 700;
-}
-
 .pointer:hover {
   cursor: pointer;
 }
-.tech-icon:hover {
-  filter: grayscale(0%);
-}
-.tech-icon {
-  filter: grayscale(100%);
-  transition: filter 0.3s ease;
-}
 
-.tech-name {
-  opacity: 0;
-  transition: opacity 0.4s ease;
+.container {
+  padding: 0;
+  margin: 0;
 }
-
-.tech-item:hover .tech-name {
-  opacity: 1;
-}
-
-textarea,
-input {
-  border: none;
-  background: none;
-  border-image: "./hor_line.svg";
-}
-textarea {
-  width: 100%;
-}
-textarea,
-input:focus-visible {
-  border: none;
-  background: none;
-  background-color: none;
-  outline: none;
-}
-#button:hover {
-  cursor: pointer;
+.main {
+  padding: 2rem 10%;
 }
 
 /* EXPERIENCE */
@@ -105,6 +82,23 @@ input:focus-visible {
   width: 100%;
   height: 100%;
 }
+
+.tech-icon:hover {
+  filter: grayscale(0%);
+}
+.tech-icon {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.tech-name {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.tech-item:hover .tech-name {
+  opacity: 1;
+}
 /* MAIN PROJECTS */
 .projectsContainer {
   display: grid;
@@ -125,12 +119,40 @@ input:focus-visible {
 }
 
 /* CONTACT */
+textarea,
+input {
+  border: none;
+  background: none;
+  border-image: "./hor_line.svg";
+}
+textarea {
+  width: 100%;
+}
+textarea,
+input:focus-visible {
+  border: none;
+  background: none;
+  background-color: none;
+  outline: none;
+}
+#button:hover {
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
 @media (max-width: 900px) {
+  .main {
+    padding: 2rem 10% !important;
+  }
   .petProjectContainer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 600px) {
+  .main {
+    padding: 1rem 10px !important;
+  }
+
   /* MAIN PROJECTS */
   .projectsContainer {
     display: grid;
@@ -166,6 +188,7 @@ input:focus-visible {
   }
 }
 @media (max-width: 1100px) {
+  /* EXPRERIENCE */
   .companyDetailContainer {
     flex-direction: column;
   }
@@ -174,5 +197,11 @@ input:focus-visible {
   }
   .projectsContainer {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1300px) {
+  .main {
+    padding: 2rem 15% ;
   }
 }

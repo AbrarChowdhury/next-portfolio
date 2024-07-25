@@ -1,4 +1,3 @@
-import styles from "./ExperienceSection.module.css"
 import ExperienceItem from "./ExperienceItem"
 import {
   hmsTechList,
@@ -11,7 +10,7 @@ const ExperienceSection = () => {
   return (
     <section id='experience'>
       <h1>Experience</h1>
-      <div className={styles.content}>
+      <div>
         <ExperienceItem
           date='Now'
           company='Tech Dojo Ltd.'

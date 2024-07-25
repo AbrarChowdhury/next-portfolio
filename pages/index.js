@@ -80,7 +80,7 @@ export default function Home() {
         </p>
       </section>
 
-      <main className={styles.main}>
+      <main className="main">
         <About />
         <ExperienceSection />
         <Projects />
