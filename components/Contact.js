@@ -56,6 +56,7 @@ const ContactForm = () => {
           src='email_to.svg'
           style={{ maxWidth: "600px", margin: "0 auto" }}
         />
+
         <div
           style={{
             display: "flex",
@@ -85,8 +86,8 @@ const ContactForm = () => {
           >
             <img
               src='email_from.svg'
-              height={"15"}
-              style={{ marginRight: "10px", marginBottom: "-3px" }}
+              className="label"
+              style={{ marginRight: "10px", marginBottom: "-3px", height:"15px" }}
             />
             <input
               type='text'
@@ -110,9 +111,10 @@ const ContactForm = () => {
                 height: "30px",
               }}
             ></div>
-            <div style={{ marginTop: "10px", marginBottom: "20px" }}>
+            <div className="email_cont" style={{ marginTop: "10px", marginBottom: "20px" }}>
               <img
                 src='email_email.svg'
+                className="label"
                 height={"15"}
                 style={{ marginRight: "10px", marginBottom: "-3px" }}
               />
@@ -128,6 +130,7 @@ const ContactForm = () => {
 
             <img
               src='email_dear.svg'
+              className="message_label"
               height={"20"}
               style={{ marginRight: "10px", marginBottom: "-3px" }}
             />

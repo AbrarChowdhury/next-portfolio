@@ -92,6 +92,8 @@ input:focus-visible {
   display: grid;
   gap: 20px;
 }
+
+/* CONTACT */
 @media (max-width: 900px) {
   .petProjectContainer {
     grid-template-columns: repeat(2, 1fr);
@@ -100,6 +102,23 @@ input:focus-visible {
 @media (max-width: 600px) {
   .petProjectContainer {
     grid-template-columns: repeat(1, 1fr);
+  }
+  /* CONTACT */
+  #contact-form {
+    padding: 8vw 6vw !important;
+  }
+  .label {
+    height: 10px !important;
+  }
+  .email_cont{
+    margin-top: 5px !important;
+    margin-bottom: 10px !important;
+  }
+  .message_label {
+    height: 13px;
+  }
+  #front_1_ {
+    display: none !important;
   }
 }
 @media (max-width: 1100px) {
