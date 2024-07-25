@@ -2,12 +2,15 @@ import React from "react"
 
 const LiveView = ({ link, size }) => {
   return (
-    <a href={link} target="_blank" rel="noreferrer" >
+    <a href={link} target="_blank" rel="noreferrer" style={{position:"relative"}} >
       <img
         src='link.svg'
-        width={size || "15px"}
+        height={size || "20px"}
         style={{
-          marginLeft: "10px",
+          position:"absolute",
+          marginLeft: "1px",
+          top: "50%",
+          transform: "translateY(-50%)"
         }}
       />
     </a>
