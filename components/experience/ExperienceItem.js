@@ -48,7 +48,7 @@ const ExperienceItem = ({
               src='arrow.svg'
             />
           </div>
-          <div onClick={toggleCollapse} className='viewProject'>
+          <div onClick={toggleCollapse} className='viewProject onlyBigBtn'>
             <h3 style={{ margin: 0 }}>
               {isCollapsed ? "View Projects" : "Hide Projects"}
             </h3>
@@ -63,7 +63,6 @@ const ExperienceItem = ({
             />
           </div>
         </div>
-
         <div
           className='companyDetails'
           style={{
@@ -72,7 +71,7 @@ const ExperienceItem = ({
           ref={desginationRef}
           onClick={toggleCollapse}
         >
-          <div style={{}}>
+          <div >
             <div>
               <h2>{role}</h2>
               <h3
@@ -90,6 +89,24 @@ const ExperienceItem = ({
           </div>
         </div>
       </div>
+        <div
+          onClick={toggleCollapse}
+          className='viewProject onlyMidBtn'
+          style={{ display: "flex" }}
+        >
+          <h3 style={{ margin: 0 }}>
+            {isCollapsed ? "View Projects" : "Hide Projects"}
+          </h3>
+          <img
+            src='arrow_single_down.svg'
+            width='30px'
+            style={{
+              marginLeft: "10px",
+              transform: isCollapsed ? "rotate(0deg)" : "rotate(180deg)",
+              transition: "transform 0.3s ease",
+            }}
+          />
+        </div>
       <div
         ref={contentRef}
         style={{
