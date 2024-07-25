@@ -214,7 +214,7 @@ input:focus-visible {
   }
 
   .petProjectContainer {
-    grid-template-columns: repeat(1, 1fr)!important;
+    grid-template-columns: repeat(1, 1fr) !important;
   }
   /* CONTACT */
   #contact-form {
