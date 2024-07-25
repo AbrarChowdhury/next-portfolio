@@ -56,14 +56,7 @@ const ExperienceItem = ({
           </div>
           <div
             onClick={toggleCollapse}
-            style={{
-              textAlign: "center",
-              cursor: "pointer",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "15px",
-            }}
+            className="viewProject"
           >
             <h3 style={{ margin: 0 }}>
               {isCollapsed ? "View Projects" : "Hide Projects"}
