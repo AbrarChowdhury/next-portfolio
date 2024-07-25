@@ -53,6 +53,26 @@ a {
 }
 
 /* EXPERIENCE */
+.experienceContainer {
+  position: relative;
+  border-bottom: 5px solid #abdcec;
+  border-left: 5px solid #abdcec;
+}
+.lastClockContainer {
+  position: relative;
+  border-left: 5px solid #abdcec;
+}
+.clockImage {
+  position: absolute;
+  left: -32.5px;
+}
+.dateText {
+  margin-left: 55px;
+  margin-top: 0px;
+  padding-top: 15px;
+  font-size: 2em;
+}
+
 .companyDetailContainer {
   display: flex;
   container: cDetailContainer / inline-size;
@@ -149,10 +169,27 @@ input:focus-visible {
   }
 }
 @media (max-width: 600px) {
+  body {
+    text-align: center;
+  }
   .main {
     padding: 1rem 10px !important;
   }
+  /* h2{
+    text-align: center;
+  } */
 
+  .experienceContainer,
+  .lastClockContainer {
+    border-left: none;
+  }
+  .clockImage {
+    /* position: absolute; */
+    left: 0px;
+  }
+  .dateText {
+    margin-left: 0;
+  }
   /* MAIN PROJECTS */
   .projectsContainer {
     display: grid;
@@ -202,6 +239,6 @@ input:focus-visible {
 
 @media (max-width: 1300px) {
   .main {
-    padding: 2rem 15% ;
+    padding: 2rem 15%;
   }
 }

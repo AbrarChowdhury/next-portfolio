@@ -22,7 +22,7 @@ const ExperienceSection = () => {
               imageSrc: "./images/virtyou.png",
               imageAlt: "VirtYou Logo",
               title: "VirtYou",
-              url:"https://virtyou.com/",
+              url: "https://virtyou.com/",
               description:
                 "VirtYou specializes in creating automated emotion (AE) software for photorealistic 3D virtual actors. This technology enables virtual actors to deliver emotionally compelling, interactive, and live performances using AI-generated responses as a script.",
               iconList: virtyouTechList,
@@ -63,7 +63,7 @@ const ExperienceSection = () => {
               imageSrc: "./images/reflect.png",
               imageAlt: "Reflect AI screen-shot",
               title: "Reflect AI",
-              url:"https://www.alphyco.com/",
+              url: "https://www.alphyco.com/",
               description:
                 'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.',
               iconList: reflectTechList,
@@ -183,23 +183,10 @@ const ExperienceSection = () => {
           ]}
         />
 
-        <div style={{ borderLeft: "5px solid #abdcec", position: "relative" }}>
-          <img
-            src='clock_end.svg'
-            width='60px'
-            style={{ position: "absolute", left: "-32.5px" }}
-          />
+        <div className='lastClockContainer'>
+          <img src='clock_end.svg' width='60px' className='clockImage' />
           <div>
-            <p
-              style={{
-                marginLeft: "55px",
-                marginTop: "0px",
-                paddingTop: "15px",
-                fontSize: "2em",
-              }}
-            >
-              Jan 2020
-            </p>
+            <p className='dateText'>Jan 2020</p>
           </div>
         </div>
       </div>

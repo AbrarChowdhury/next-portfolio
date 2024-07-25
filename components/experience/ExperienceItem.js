@@ -24,17 +24,11 @@ const ExperienceItem = ({
   }, [isCollapsed])
 
   return (
-    <div
-      style={{
-        position: "relative",
-        borderBottom: "5px solid #abdcec",
-        borderLeft: "5px solid #abdcec",
-      }}
-    >
+    <div className='experienceContainer'>
       <img
         src={date == "Now" ? "clock_start.svg" : "clock.svg"}
         width='60px'
-        style={{ position: "absolute", left: "-32.5px" }}
+        className='clockImage'
       />
       <div className='companyDetailContainer'>
         <div
@@ -47,17 +41,14 @@ const ExperienceItem = ({
           }}
         >
           <div>
-            <span style={{ marginLeft: "55px", fontSize: "2em" }}>{date}</span>
+            <span className='dateText'>{date}</span>
             <img
-              className="jobArrow"
+              className='jobArrow'
               style={{ display: "inline", width: "100px", marginLeft: "10px" }}
               src='arrow.svg'
             />
           </div>
-          <div
-            onClick={toggleCollapse}
-            className="viewProject"
-          >
+          <div onClick={toggleCollapse} className='viewProject'>
             <h3 style={{ margin: 0 }}>
               {isCollapsed ? "View Projects" : "Hide Projects"}
             </h3>
@@ -76,18 +67,24 @@ const ExperienceItem = ({
         <div
           className='companyDetails'
           style={{
-            background: "url(./rect_back.svg)"
+            background: "url(./rect_back.svg)",
           }}
           ref={desginationRef}
           onClick={toggleCollapse}
         >
           <div style={{}}>
             <div>
-              <h3 style={{ marginBottom: "5px", textTransform: "uppercase" }}>
+              <h2>{role}</h2>
+              <h3
+                style={{
+                  marginTop: "-10px",
+                  marginBottom: "5px",
+                  textTransform: "uppercase",
+                }}
+              >
                 {company}
                 <LiveView link={companyURL} />
               </h3>
-              <h2 style={{ marginTop: "0px" }}>{role}</h2>
               <p>{responsibilities}</p>
             </div>
           </div>
