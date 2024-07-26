@@ -25,13 +25,11 @@ const ExperienceSection = () => {
               url: "https://virtyou.com/",
               description:
                 "VirtYou specializes in creating automated emotion (AE) software for photorealistic 3D virtual actors. This technology enables virtual actors to deliver emotionally compelling, interactive, and live performances using AI-generated responses as a script.",
+              role: {
+                text: "I am a core developer for VirtYou, involved in various aspects of the project, including web development, creating procedural animations with javascript, building 3D models, rigging, animating, and implementing machine learning models. Simulteneously, building two inherently different applications for couple of clients of virtYou and gradually developing an easy to integrate system for anybody incorporate into there app",
+              },
               iconList: virtyouTechList,
-              coreFeatures: [
-                "Procedurally generated natural expression based on context",
-                "Live procedural motion",
-                "Easy integration with any web service",
-                "Photoreal 3D characters",
-              ],
+              subProjectHeading: "Client Work",
               subProjects: [
                 {
                   imageSrc: "./images/virtyou.png",
@@ -43,7 +41,8 @@ const ExperienceSection = () => {
                   iconList: virtyouTechList,
                   shortDesc: "Educational VR APP",
                   description:
-                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.',
+                    "A WebXR app designed to train teachers by simulating interactions with a virtual child in a childcare setting, allowing educators to practice and improve their skills in handling various emotional scenarios.",
+                  role: { text: "masti" }, //!TODO
                 },
                 {
                   imageSrc: "./images/virtyou.png",
@@ -55,7 +54,10 @@ const ExperienceSection = () => {
                   iconList: virtyouTechList,
                   shortDesc: "Employee training app",
                   description:
-                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.',
+                    "Mindbloom AI helps bridge the training and practice gap for managers by providing a scalable and accessible practice environment for difficult conversations, such as performance reviews and workplace disputes.",
+                  role: {
+                    text: "I developed a web app that allows users to practice conversations with a lifelike virtual coach. This involves collecting user inputs, processing scenarios with Mindbloom's backend, facilitating real-time interactions with the virtual coach, and providing performance feedback.",
+                  },
                 },
               ],
             },
@@ -65,13 +67,18 @@ const ExperienceSection = () => {
               title: "Reflect AI",
               url: "https://www.alphyco.com/",
               description:
-                'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.',
+                " Reflect AI is a communication add-on for Webex, Google Meet, Outlook™, and Gmail™ that flags harmful, unlawful, and unethical language before sending. For video calls in Webex and Google Meet, it converts speech-to-text and provides live feedback through icons and emojis, helping protect against ethical breaches.",
+              role: {
+                text: "I primarily worked on the Webex integration for Reflect AI. My responsibilities included:",
+                bullets: [
+                  "Designing and implementing the WebSocket architecture for providing live feedback.",
+                  "Researching and understanding the Webex developer documentation.",
+                  "Developing the extension for Webex.",
+                  "Implementing voice-to-text functionality for Webex video calls.",
+                  "Resolving permission issues and ensuring seamless integration.",
+                ],
+              },
               iconList: reflectTechList,
-              coreFeatures: [
-                "Live feedback on potentially harmful language",
-                "Seamless integration with email services",
-                "Real-time text analysis and feedback",
-              ],
             },
           ]}
         />
@@ -87,14 +94,12 @@ const ExperienceSection = () => {
               imageAlt: "HMS screen-shot",
               title: "Hospital Management System",
               description:
-                "The Hospital Management System (HMS) integrates various modules for managing hospital operations including discharge, lab, statistics, and appointments. It streamlines processes and enhances patient care.",
+                "Bioforge HMS (Hospital Management System) is an integrated solution designed to streamline hospital operations, enhance patient care, and improve overall efficiency. It includes various modules such as discharge, lab, appointment, and statistics, each tailored to address specific aspects of hospital management.",
+              role: {
+                text: "As a software engineer, I played a key role in developing and maintaining several modules within the Bioforge HMS, including:",
+              },
               iconList: hmsTechList,
-              coreFeatures: [
-                "Discharge Module",
-                "Lab Module",
-                "Statistics Module",
-                "Appointment Module",
-              ],
+              subProjectHeading: "HMS Modules:",
               subProjects: [
                 {
                   imageSrc: "./images/virtyou.png",
@@ -103,7 +108,15 @@ const ExperienceSection = () => {
                   shortDesc: "Web-App: simplyf patient discharges",
                   iconList: virtyouTechList,
                   description:
-                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.',
+                    "The HMS-Discharge Module is part of a comprehensive hospital management system designed to streamline the discharge process for patients. It ensures accurate and efficient handling of discharge procedures, including documentation and coordination with other hospital departments.",
+                  role: {
+                    text: "I developed the discharge module, focusing on:",
+                    bullets: [
+                      "Implementing features for managing patient discharge records",
+                      "Ensuring smooth data flow and integration with other hospital management modules",
+                      "Collaborating with the team to ensure the module met hospital requirements and standards",
+                    ],
+                  },
                 },
                 {
                   imageSrc: "./images/virtyou.png",
@@ -112,7 +125,15 @@ const ExperienceSection = () => {
                   shortDesc: "Lab Module",
                   iconList: virtyouTechList,
                   description:
-                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.',
+                    "The HMS-Lab Module manages the laboratory operations within the hospital, including test orders, results, and lab workflows.",
+                  role: {
+                    text: "I worked on the lab module, where I:",
+                    bullets: [
+                      "Developed and maintained functionalities for managing lab tests and results",
+                      "Integrated lab results with patient records for seamless data accessibility",
+                      "Ensured compliance with medical standards and protocols",
+                    ],
+                  },
                 },
                 {
                   imageSrc: "./images/virtyou.png",
@@ -121,7 +142,15 @@ const ExperienceSection = () => {
                   shortDesc: "Statistics",
                   iconList: virtyouTechList,
                   description:
-                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.',
+                    "The HMS-Statistics Module provides comprehensive data analytics and reporting tools for hospital management, aiding in decision-making and performance evaluation.",
+                  role: {
+                    text: "I was involved in the development of the statistics module, focusing on:",
+                    bullets: [
+                      "Implementing data aggregation and visualization features.",
+                      "Ensuring accurate and real-time reporting of hospital metrics.",
+                      "Collaborating with stakeholders to define key performance indicators and reporting requirements.",
+                    ],
+                  },
                 },
                 {
                   imageSrc: "./images/virtyou.png",
@@ -130,7 +159,15 @@ const ExperienceSection = () => {
                   shortDesc: "Appointment",
                   iconList: virtyouTechList,
                   description:
-                    'Reflect AI is an easy-to-use communication add-on for Outlook™ and Gmail™ that flags harmful, unlawful, and unethical language before you hit "send." It protects your company from reputational damage, ethical breaches, and costly litigation.',
+                    "The HMS-Appointment Module facilitates the scheduling and management of patient appointments, improving the efficiency of hospital operations.",
+                  role: {
+                    text: "I contributed to the appointment module by:",
+                    bullets: [
+                      "Implementing features for appointment booking and management.",
+                      "Ensuring real-time updates and notifications for both patients and healthcare providers.",
+                      "Optimizing the appointment scheduling system for better resource utilization.",
+                    ],
+                  },
                 },
               ],
             },
@@ -139,13 +176,16 @@ const ExperienceSection = () => {
               imageAlt: "VSM screen-shot",
               title: "Real-Time Vital Sign Monitor",
               description:
-                "A low-cost remote vital sign monitoring system designed for continuous and long-term monitoring of patients. It includes a wrist unit, bedside monitor, and a web-based GUI accessible by medical personnel remotely.",
+                "The Vital Sign Monitor project involves the development of a cost-effective solution for real-time remote monitoring of patients' vital signs.",
+              role: {
+                text: "I worked on the software integration of the vital sign monitor, ensuring:",
+                bullets: [
+                  "Seamless data transmission from IoT devices to the hospital management system.",
+                  "Real-time processing and alert mechanisms for abnormal vital signs.",
+                  "User-friendly interface for healthcare providers to monitor patients remotely.",
+                ],
+              },
               iconList: vsmTechLists,
-              coreFeatures: [
-                "Continuous and remote monitoring",
-                "Open source and low-cost hardware",
-                "Four-layer architecture: sensing, data processing, networking, and applications",
-              ],
             },
           ]}
         />
@@ -162,11 +202,14 @@ const ExperienceSection = () => {
               title: "Neonatal Incubator",
               description:
                 "Designed a low-cost neonatal incubator to provide a controlled environment for newborns. The design focused on affordability and ease of use in low-resource settings.",
-              coreFeatures: [
-                "Controlled temperature and humidity",
-                "Easy access for medical staff",
-                "Cost-effective design",
-              ],
+              role: {
+                text: "As a product designer, I:",
+                bullets: [
+                  "Worked on the design and development of the neonatal incubator.",
+                  "Collaborated with medical professionals to ensure the incubator met healthcare standards.",
+                  "Contributed to the project that received recognition and awards for its innovative design and impact.",
+                ],
+              },
             },
             {
               imageSrc: "./images/ptl.jpg",
@@ -174,11 +217,14 @@ const ExperienceSection = () => {
               title: "Phototherapy Lights",
               description:
                 "Developed phototherapy lights for treating neonatal jaundice. The design ensures effective treatment while being safe and affordable.",
-              coreFeatures: [
-                "Effective jaundice treatment",
-                "Safe for newborns",
-                "Low-cost and durable",
-              ],
+              role: {
+                text: "As a product designer, I:",
+                bullets: [
+                  "Designed the phototherapy light device, focusing on functionality and ease of use.",
+                  "Integrated IoT capabilities for real-time monitoring and data collection.",
+                  "Ensured the device met medical requirements for effective treatment of neonatal jaundice.",
+                ],
+              },
             },
           ]}
         />
