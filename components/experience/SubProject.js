@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import LiveView from "../LiveView"
 import TechIcons from "../TechIcons"
+import ImageWithBackground from "../imageBackground/ImageBackground"
 
 const SubProject = ({
   imageSrc,
@@ -11,7 +12,8 @@ const SubProject = ({
   title,
   shortDesc,
   description,
-  iconList
+  role,
+  iconList,
 }) => {
   const [modal, setModal] = useState(false)
   return (
@@ -39,13 +41,9 @@ const SubProject = ({
           onClick={() => setModal(false)}
         ></div>
         <div
+          className='modal'
           style={{
-            width: "50vw",
             background: "url(rect_modal.svg)",
-            backgroundSize: "100% 100%",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            position: "relative",
           }}
         >
           <img
@@ -54,24 +52,27 @@ const SubProject = ({
             style={{ position: "absolute", right: "25px", top: "25px" }}
             onClick={() => setModal(false)}
           />
-          <div style={{ padding: "25px" }}>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gridGap: "10px",
-              }}
-            >
-              <img src={imageSrc} alt={imageAlt} width='100%' />
-              <div>
-                <div style={{display:"flex", alignItems:"center"}}>
-                {logoSrc && <img src={logoSrc} alt={logoAlt} width='200' />}
-                {companyURL&&<LiveView link={companyURL} size="30"/>}
-                </div>
-                {!logoSrc && <h2>{title}</h2>}
-                <p style={{ margin: 0, fontSize: "smaller" }}>{description}</p>
-                <br />
-                <TechIcons iconList={iconList}/>
+          <div className='modal-content'>
+            <ImageWithBackground src={imageSrc} className='notPhone' />
+            <div>
+              <div style={{ display: "flex", alignItems: "center", float:"right", marginRight:"55px" }}>
+                {logoSrc && <img src={logoSrc} alt={logoAlt} width='80' />}
+                {companyURL && <LiveView link={companyURL} size='30' />}
+              </div>
+              <h3 style={{ margin: 0 }}>What is the project?</h3>
+              <p style={{ marginTop: "5px" }}>{description}</p>
+              <h3 style={{ margin: 0 }}>How did I contribute?</h3>
+              <p style={{ marginTop: "5px" }}>{role.text}</p>
+              {role.bullets && (
+                <ul style={{ marginTop: 0 }}>
+                  {role.bullets.map((bullet, index) => (
+                    <li key={index}>{bullet}</li>
+                  ))}
+                </ul>
+              )}
+              <div className='notPhone'>
+                <h3 style={{ marginTop: 0 }}>Technologies Used</h3>
+                <TechIcons iconList={iconList} />
               </div>
             </div>
           </div>

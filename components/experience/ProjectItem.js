@@ -2,6 +2,7 @@ import { useState } from "react"
 import TechIcons from "../TechIcons"
 import SubProject from "./SubProject"
 import LiveView from "../LiveView"
+import ImageWithBackground from "../imageBackground/ImageBackground"
 
 const ProjectItem = ({
   imageSrc,
@@ -9,7 +10,6 @@ const ProjectItem = ({
   title,
   description,
   role,
-  coreFeatures,
   subProjects,
   iconList,
   url,
@@ -29,6 +29,7 @@ const ProjectItem = ({
           {title}
           <LiveView href={url} />
         </h2>
+        {/* <ImageWithBackground src={imageSrc}/> */}
         <img width='100%' src={imageSrc} alt={imageAlt} />
       </div>
       <div

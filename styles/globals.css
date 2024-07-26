@@ -141,9 +141,23 @@ a {
 }
 .projectMain {
   padding: 20px;
-  /* width: 100%; */
 }
-
+/* SUB PROJECTS */
+.modal {
+  width: min(1000px, 90%);
+  max-height: 90vh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.modal-content {
+  padding: 40px 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  max-height: inherit;
+}
 /* PET PROJECTS */
 .petProjectContainer {
   grid-template-columns: repeat(3, 1fr);
@@ -181,7 +195,9 @@ input:focus-visible {
   .main {
     padding: 1rem 10px !important;
   }
-
+  .notPhone {
+    display: none !important;
+  }
   .onlyPhone {
     display: block;
   }
@@ -214,6 +230,12 @@ input:focus-visible {
     margin: 0px 5%;
   }
 
+  /* SUB PROJECTS */
+  .modal-content {
+    grid-template-columns: 1fr;
+  }
+
+  /* PET PROJECTS */
   .petProjectContainer {
     grid-template-columns: repeat(1, 1fr) !important;
   }
