@@ -17,7 +17,7 @@ const SubProject = ({
 }) => {
   const [modal, setModal] = useState(false)
   return (
-    <div className='pointer' style={{ maxWidth: "47%" }}>
+    <div className='pointer' style={{justifySelf:"center"}}>
       <div
         style={{
           position: "fixed",
@@ -55,7 +55,14 @@ const SubProject = ({
           <div className='modal-content'>
             <ImageWithBackground src={imageSrc} className='notPhone' />
             <div>
-              <div style={{ display: "flex", alignItems: "center", float:"right", marginRight:"55px" }}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  float: "right",
+                  marginRight: "55px",
+                }}
+              >
                 {logoSrc && <img src={logoSrc} alt={logoAlt} width='80' />}
                 {companyURL && <LiveView link={companyURL} size='30' />}
               </div>
@@ -89,16 +96,17 @@ const SubProject = ({
         onClick={() => setModal(true)}
       >
         <div
-         style={{ 
-          // display: "grid", gridTemplateColumns: "1fr 1fr" 
-          }}>
+          style={
+            {
+              // display: "grid", gridTemplateColumns: "1fr 1fr"
+            }
+          }
+        >
           {/* <img src={imageSrc} alt={imageAlt} width='100' /> */}
           <ImageWithBackground src={imageSrc} alt={imageAlt} />
           <div>
             {/* {logoSrc && <img src={logoSrc} alt={logoAlt} width='100%' />} */}
-            <p style={{ margin: 0, fontWeight:600}}>
-              {title}
-            </p>
+            <p style={{ margin: 0, fontWeight: 600 }}>{title}</p>
           </div>
         </div>
         <p style={{ margin: 0, fontSize: "smaller" }}>{shortDesc}</p>
