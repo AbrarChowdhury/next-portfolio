@@ -10,6 +10,9 @@ import ContactForm from "../components/Contact"
 import Socials from "../components/Socials"
 import Footer from "../components/Footer"
 import Certificates from "../components/Certificates"
+import Blogs from "../components/Blogs"
+import Achievements from "../components/Achievements"
+import Explorations from "../components/Explorations"
 export default function Home() {
   const ref = useRef()
   const scrollRef = useRef()
@@ -82,17 +85,21 @@ export default function Home() {
         </p>
       </section>
 
-      <main className="main">
+      <main className='main'>
         <About />
         <ExperienceSection />
-        <Certificates/>
+        {/* <Explorations /> */}
+        {/* <Blogs /> */} 
+        {/* replace explorations with blogs later on */}
+        <Achievements />
+        <Certificates />
         <Projects />
         <section id='contact'>
           <h1 className='title'>Get In Touch</h1>
         </section>
       </main>
       <ContactForm />
-      <Footer/>
+      <Footer />
       {/* <footer className={styles.footer}>
         <Socials />
       </footer> */}

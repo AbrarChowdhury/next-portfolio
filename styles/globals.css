@@ -31,7 +31,7 @@ h1 {
 h1:hover {
   letter-spacing: 2px; /* Increase the space between letters on hover */
 }
-.subTile{
+.subTile {
   margin-top: -3rem;
   opacity: 0.4;
 }
@@ -44,6 +44,10 @@ a {
   box-sizing: Btn border-box;
 }
 
+.col-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 .onlyMidBtn {
   display: none !important;
 }
@@ -225,6 +229,52 @@ input:focus-visible {
 }
 
 /* RESPONSIVE */
+@media (max-width: 1300px) {
+  .main {
+    padding: 2rem 15%;
+  }
+  .projectsContainer {
+  }
+}
+@media (max-width: 1100px) {
+  /* EXPRERIENCE */
+  .companyDetailContainer {
+    flex-direction: column;
+  }
+  .companyDetails {
+    margin-top: 25px;
+  }
+  .jobArrow {
+    display: none !important;
+  }
+  .projectsContainer {
+    grid-template-columns: 1fr;
+    padding-top: 10px;
+  }
+  .subProjectContainer {
+    padding-bottom: 60px;
+  }
+  .col-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .onlyBigBtn {
+    display: none;
+  }
+  .onlyMidBtn {
+    display: flex !important;
+  }
+}
+@media (max-width: 900px) {
+  .main {
+    padding: 2rem 10% !important;
+  }
+  .col-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* .petProjectContainer {
+    grid-template-columns: repeat(2, 1fr);
+  } */
+}
 @media (max-width: 600px) {
   body {
     text-align: center;
@@ -242,7 +292,9 @@ input:focus-visible {
   .notPhone {
     display: none;
   }
-
+  .col-3 {
+    grid-template-columns: 1fr;
+  }
   .aboutFont {
     font-size: 1.1em;
     text-align: justify;
@@ -304,50 +356,6 @@ input:focus-visible {
   } */
   #front_1_ {
     display: none !important;
-  }
-}
-@media (max-width: 900px) {
-  .main {
-    padding: 2rem 10% !important;
-  }
-  /* .petProjectContainer {
-    grid-template-columns: repeat(2, 1fr);
-  } */
-}
-@media (max-width: 1100px) {
-  /* EXPRERIENCE */
-  .companyDetailContainer {
-    flex-direction: column;
-  }
-  .companyDetails {
-    margin-top: 25px;
-  }
-  .jobArrow {
-    display: none !important;
-  }
-  .projectsContainer {
-    grid-template-columns: 1fr;
-    padding-top: 10px;
-  }
-  .subProjectContainer {
-    padding-bottom: 60px;
-  }
-  .col-4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .onlyBigBtn {
-    display: none;
-  }
-  .onlyMidBtn {
-    display: flex !important;
-  }
-}
-
-@media (max-width: 1300px) {
-  .main {
-    padding: 2rem 15%;
-  }
-  .projectsContainer {
   }
 }
 

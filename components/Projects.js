@@ -10,7 +10,7 @@ const Projects = () => {
   return (
     <section id="projects">
       <h1 className="title">Projects</h1>
-      <p className="subTile">Some projects built in order to get in some deliberate practice while mastering my craft. This is not the exhaustive list, mostly the ones simple/free to host</p>
+      <p className="subTile">Some projects built in order to get in some deliberate practice while mastering my craft. Definitely not the exhaustive list, mostly the ones simple/free to host.</p>
       <div className="petProjectContainer">
         <CardCarousel cards={cards} />
       </div>
