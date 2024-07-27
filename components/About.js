@@ -1,9 +1,9 @@
 import Image from "next/image"
 import React from "react"
-import styles from "./About.module.scss"
+
 const About = () => {
   return (
-    <div className={styles.about}>
+    <div id="aboutu">
       <h1>About Me</h1>
       <div style={{ display: "flex" }}>
         <p className='aboutFont'>

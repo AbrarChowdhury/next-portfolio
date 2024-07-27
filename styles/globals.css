@@ -31,6 +31,10 @@ h1 {
 h1:hover {
   letter-spacing: 2px; /* Increase the space between letters on hover */
 }
+.subTile{
+  margin-top: -3rem;
+  opacity: 0.4;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -63,7 +67,7 @@ a {
 }
 
 .aboutFont {
-  font-size: 1.5em;
+  font-size: 1.3em;
   text-align: center;
 }
 

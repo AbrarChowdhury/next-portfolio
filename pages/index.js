@@ -9,6 +9,7 @@ import ExperienceSection from "../components/experience/ExperienceSection"
 import ContactForm from "../components/Contact"
 import Socials from "../components/Socials"
 import Footer from "../components/Footer"
+import Certificates from "../components/Certificates"
 export default function Home() {
   const ref = useRef()
   const scrollRef = useRef()
@@ -84,6 +85,7 @@ export default function Home() {
       <main className="main">
         <About />
         <ExperienceSection />
+        <Certificates/>
         <Projects />
         <section id='contact'>
           <h1 className='title'>Get In Touch</h1>
