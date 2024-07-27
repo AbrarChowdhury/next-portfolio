@@ -1,22 +1,25 @@
-import React, { useState } from "react"
+import React from "react"
 import projectsData from "../projectsData"
+import CardCarousel from "./CardCarousel"
 
 const Projects = () => {
+  const cards = projectsData.map((project, i) => (
+    <Card key={i} project={project} />
+  ));
+
   return (
     <section id="portfolio">
       <h1 className="title">Projects</h1>
-      <div className="petProjectContainer" >
-        {projectsData.map((project, i) => (
-          <Cards key={i} project={project} />
-        ))}
+      <div className="petProjectContainer">
+        <CardCarousel cards={cards} />
       </div>
     </section>
-  )
+  );
 }
 
-function Cards({ project }) {
-  const [hovering, setHovering] = useState(false)
-  const { title, link, desc } = project
+const Card = ({ project }) => {
+  const { title, link, desc } = project;
+
   return (
     <a
       style={{
@@ -27,15 +30,14 @@ function Cards({ project }) {
         backgroundSize: "100% 100%",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
+        minHeight:"170px"
       }}
       href={link}
-      onMouseEnter={() => setHovering(true)}
-      onMouseLeave={() => setHovering(false)}
     >
       <h2>{title}</h2>
       <p>{desc}</p>
     </a>
-  )
+  );
 }
 
-export default Projects
+export default Projects;

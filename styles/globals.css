@@ -46,7 +46,7 @@ a {
 .onlyBigBtn {
   display: block;
 }
-.onlyPhone{
+.onlyPhone {
   display: none;
 }
 
@@ -175,11 +175,11 @@ a {
   max-height: inherit;
 }
 /* PET PROJECTS */
-.petProjectContainer {
+/* .petProjectContainer {
   grid-template-columns: repeat(3, 1fr);
   display: grid;
   gap: 20px;
-}
+} */
 
 /* CONTACT */
 #contact-form {
@@ -276,9 +276,9 @@ input:focus-visible {
   }
 
   /* PET PROJECTS */
-  .petProjectContainer {
+  /* .petProjectContainer {
     grid-template-columns: repeat(1, 1fr) !important;
-  }
+  } */
   /* CONTACT */
   #contact-form {
     padding-top: 10%;
@@ -306,9 +306,9 @@ input:focus-visible {
   .main {
     padding: 2rem 10% !important;
   }
-  .petProjectContainer {
+  /* .petProjectContainer {
     grid-template-columns: repeat(2, 1fr);
-  }
+  } */
 }
 @media (max-width: 1100px) {
   /* EXPRERIENCE */
@@ -345,4 +345,10 @@ input:focus-visible {
   }
   .projectsContainer {
   }
+}
+
+.petProjectContainer .slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
