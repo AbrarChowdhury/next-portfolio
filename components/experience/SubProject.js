@@ -17,7 +17,7 @@ const SubProject = ({
 }) => {
   const [modal, setModal] = useState(false)
   return (
-    <div className='pointer' style={{ maxWidth: "50%" }}>
+    <div className='pointer' style={{ maxWidth: "47%" }}>
       <div
         style={{
           position: "fixed",
@@ -88,11 +88,15 @@ const SubProject = ({
         }}
         onClick={() => setModal(true)}
       >
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
-          <img src={imageSrc} alt={imageAlt} width='100' />
+        <div
+         style={{ 
+          // display: "grid", gridTemplateColumns: "1fr 1fr" 
+          }}>
+          {/* <img src={imageSrc} alt={imageAlt} width='100' /> */}
+          <ImageWithBackground src={imageSrc} alt={imageAlt} />
           <div>
-            {logoSrc && <img src={logoSrc} alt={logoAlt} width='100%' />}
-            <p style={{ margin: 0, paddingLeft: "5px", fontSize: "smaller" }}>
+            {/* {logoSrc && <img src={logoSrc} alt={logoAlt} width='100%' />} */}
+            <p style={{ margin: 0, fontWeight:600}}>
               {title}
             </p>
           </div>

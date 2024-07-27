@@ -57,7 +57,7 @@ const ProjectItem = ({
         <TechIcons iconList={iconList} />
         <br />
         {subProjects && (
-          <div style={{ display: "flex", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", justifyContent:"space-evenly" }}>
             {subProjects?.map((subProject, i) => (
               <SubProject key={i} {...subProject} />
             ))}
