@@ -8,6 +8,7 @@ import Projects from "../components/Projects"
 import ExperienceSection from "../components/experience/ExperienceSection"
 import ContactForm from "../components/Contact"
 import Socials from "../components/Socials"
+import Footer from "../components/Footer"
 export default function Home() {
   const ref = useRef()
   const scrollRef = useRef()
@@ -89,7 +90,7 @@ export default function Home() {
         </section>
       </main>
       <ContactForm />
-
+      <Footer/>
       {/* <footer className={styles.footer}>
         <Socials />
       </footer> */}
