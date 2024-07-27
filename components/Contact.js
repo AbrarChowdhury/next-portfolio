@@ -21,6 +21,7 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    console.log("form submission")
     setButtonText("Sending...")
 
     const serviceID = "default_service"
@@ -53,8 +54,16 @@ const ContactForm = () => {
         }}
       >
         <img
+          className='notPhone'
           src='email_to.svg'
+          alt='email-illustration'
           style={{ maxWidth: "600px", margin: "0 auto" }}
+        />
+        <img
+          className='onlyPhone'
+          src='email_page.svg'
+          alt='page-illustration'
+          style={{ maxWidth: "90%", margin: "0 auto" }}
         />
 
         <div
@@ -75,48 +84,44 @@ const ContactForm = () => {
             width: "100%",
           }}
         >
-          <form
-            id='contact-form'
-            onSubmit={handleSubmit}
-            style={{
-              padding: "10vh",
-              width: "100%",
-              maxWidth: "600px",
-            }}
-          >
-            <img
-              src='email_from.svg'
-              className="label"
-              style={{ marginRight: "10px", marginBottom: "-3px", height:"15px" }}
-            />
-            <input
-              type='text'
-              id='name'
-              name='from_name'
-              value={formState.from_name}
-              onChange={handleChange}
-              required
-            />
-            <div
-              id='button'
-              type='submit'
-              style={{
-                background: "url(email_send.svg)",
-                backgroundSize: "100% 100%",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                display: "inline",
-                float: "right",
-                width: "30px",
-                height: "30px",
-              }}
-            ></div>
-            <div className="email_cont" style={{ marginTop: "10px", marginBottom: "20px" }}>
+          <form id='contact-form' onSubmit={handleSubmit}>
+            <div className='from_container'>
+              <img
+                src='email_from.svg'
+                className='label'
+                style={{
+                  marginRight: "10px",
+                  marginBottom: "-3px",
+                  width: "60px",
+                }}
+              />
+              <input
+                type='text'
+                id='name'
+                name='from_name'
+                value={formState.from_name}
+                onChange={handleChange}
+                required
+              />
+              <button
+                id='button'
+                type='submit'
+                style={{
+                  background: `url(${(buttonText=="Send")?"email_send.svg":"sending.gif"})`,
+                  backgroundSize: "100% 100%",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                  width: "30px",
+                  height: "30px",
+                  border:"none"
+                }}
+              ></button>
+            </div>
+            <div className='email_container'>
               <img
                 src='email_email.svg'
-                className="label"
-                height={"15"}
-                style={{ marginRight: "10px", marginBottom: "-3px" }}
+                className='label'
+                width='60px'
               />
               <input
                 type='email'
@@ -129,10 +134,10 @@ const ContactForm = () => {
             </div>
 
             <img
+              className='message_label'
               src='email_dear.svg'
-              className="message_label"
-              height={"20"}
-              style={{ marginRight: "10px", marginBottom: "-3px" }}
+              width='100px'
+              // style={{ marginRight: "10px", marginBottom: "-3px" }}
             />
             <textarea
               id='message'

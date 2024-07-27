@@ -46,6 +46,9 @@ a {
 .onlyBigBtn {
   display: block;
 }
+.onlyPhone{
+  display: none;
+}
 
 .pointer:hover {
   cursor: pointer;
@@ -145,7 +148,7 @@ a {
 }
 /* SUB PROJECTS */
 .subProjectContainer {
-  display:grid;
+  display: grid;
   grid-gap: 15px;
   justify-content: center;
   padding: 20px;
@@ -179,6 +182,24 @@ a {
 }
 
 /* CONTACT */
+#contact-form {
+  padding-top: 60px;
+  width: 80%;
+  max-width: 500px;
+  text-align: left;
+}
+.from_container {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  align-items: baseline;
+  margin-bottom: 5px;
+}
+.email_container {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: baseline;
+  margin-bottom: 15px;
+}
 textarea,
 input {
   border: none;
@@ -213,6 +234,9 @@ input:focus-visible {
   }
   .onlyPhone {
     display: block;
+  }
+  .notPhone {
+    display: none;
   }
 
   .aboutFont {
@@ -257,18 +281,23 @@ input:focus-visible {
   }
   /* CONTACT */
   #contact-form {
-    padding: 8vw 6vw !important;
+    padding-top: 10%;
   }
-  .label {
+  /* #contact-form {
+    padding-top: 60px;
+    width: 100%;
+    max-width: 500px;
+  } */
+  /* .label {
     height: 10px !important;
-  }
-  .email_cont {
+  } */
+  /* .email_cont {
     margin-top: 5px !important;
     margin-bottom: 10px !important;
-  }
-  .message_label {
+  } */
+  /* .message_label {
     height: 13px;
-  }
+  } */
   #front_1_ {
     display: none !important;
   }
@@ -296,7 +325,7 @@ input:focus-visible {
     grid-template-columns: 1fr;
     padding-top: 10px;
   }
-  .subProjectContainer{
+  .subProjectContainer {
     padding-bottom: 60px;
   }
   .col-4 {
