@@ -22,6 +22,7 @@ const ProjectItem = ({
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         padding: "2%",
+        marginBottom:"20px"
       }}
     >
       <div className='projectsContainer'>
