@@ -11,7 +11,7 @@ const Socials = () => {
       }}
     >
       <Social src='socials/github.svg' href='https://github.com/AbrarChowdhury' type='link' />
-      <Social src='socials/linkedin.svg' href='https://www.linkedin.com/in/abrar-shams-chowdhury-48a979114/' type='link' />
+      <Social src='socials/linkedIn.svg' href='https://www.linkedin.com/in/abrar-shams-chowdhury-48a979114/' type='link' />
       <Social src='socials/whatsapp.svg' href='tel:+8801836096182' type='call' />
       <Social src='socials/email.svg' href='chowdhury.abrar.shams@gmail.com' type='email' />
     </div>

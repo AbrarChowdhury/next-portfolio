@@ -7,7 +7,7 @@ import {
     vsmTechLists,
   } from "../techIconList"
   
-  export const experienceData = [
+const experienceData = [
     // TECH DOJO
     {
       date: 'Now',
@@ -218,3 +218,4 @@ import {
     },
   ];
   
+  export default experienceData
