@@ -12,7 +12,7 @@ const Achievements = () => {
       role='I was an integral part of the team that designed and developed the neonatal incubator for which we won the challenge in the Maternal & Newborn Health Innovators sector. My role encompassed. Ideation, converting ideas to detailed illustrations, making the 3D model in autocad fusion 360 referencing the illustrations, building prototypes and finally 3D printing and assembling.'
     />,
     <Achievement
-      award='University Rover Challenge'
+      award='Uni Rover Challenge'
       date='2017'
       position='Ranked, 10th in the World'
       url='https://www.dhakatribune.com/feature/tech/22449/iub-secures-10th-spot-in-university-rover'
@@ -59,19 +59,27 @@ function Achievement({ award, date, position, url, role }) {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "1fr max-content",
-          gridGap: "20px",
+          gridTemplateColumns: "1fr max-content ",
+          gridGap: "",
+          alignItems: "baseline",
         }}
       >
-        <h2 style={{ marginBottom: 0 }}>
-          {award}
-          <LiveView link={url} />
-        </h2>
+        <h2 style={{ marginBottom: 0 }}>{award}</h2>
         <h2 style={{ marginBottom: 0 }}>-{date}</h2>
       </div>
-      <p style={{ marginTop: 0, textTransform: "uppercase" }}>
-        <i>{position}</i>
-      </p>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "max-content max-content ",
+          alignItems:"center",
+          marginBottom:"15px"
+        }}
+      >
+        <p style={{ margin: 0, textTransform: "uppercase" }}>
+          <i>{position}</i>
+        </p>
+        <LiveView link={url} />
+      </div>
       <p style={{ marginTop: 0, textAlign: "justify" }}>{role}</p>
     </div>
   )

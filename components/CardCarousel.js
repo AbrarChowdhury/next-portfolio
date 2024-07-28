@@ -18,8 +18,8 @@ const CardCarousel = ({ cards }) => {
     })
   }, [])
   const settings = {
-    dots: true,
-    infinite: true,
+    dots: cols==cards.length?false:true,
+    infinite: false,
     speed: 500,
     slidesToShow: cols,
     slidesToScroll: 1,
