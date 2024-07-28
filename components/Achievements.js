@@ -5,6 +5,7 @@ import CardCarousel from "./CardCarousel"
 const Achievements = () => {
   const cards = [
     <Achievement
+      key='1'
       award='MIT SOLVE'
       date='2020'
       position='Winner'
@@ -12,6 +13,7 @@ const Achievements = () => {
       role='I was an integral part of the team that designed and developed the neonatal incubator for which we won the challenge in the Maternal & Newborn Health Innovators sector. My role encompassed. Ideation, converting ideas to detailed illustrations, making the 3D model in autocad fusion 360 referencing the illustrations, building prototypes and finally 3D printing and assembling.'
     />,
     <Achievement
+      key='2'
       award='Uni Rover Challenge'
       date='2017'
       position='Ranked, 10th in the World'
@@ -19,6 +21,7 @@ const Achievements = () => {
       role='I was a volunteer for this project, my role was to assist with 3D modelling in Solidworks, working on specific parts instructed by senior members. Simultaneously, working with the mechanical team, mainly in the construction of the specially designed light weight wheels. This project was one of first oportunity I got to work with so many brilliant minds. Brilliant opportunity to just observe and absorb and grow'
     />,
     <Achievement
+      key='3'
       award='Inter Uni Film Contest'
       date='2017'
       position='Runner Up'
@@ -71,8 +74,8 @@ function Achievement({ award, date, position, url, role }) {
         style={{
           display: "grid",
           gridTemplateColumns: "max-content max-content ",
-          alignItems:"center",
-          marginBottom:"15px"
+          alignItems: "center",
+          marginBottom: "15px",
         }}
       >
         <p style={{ margin: 0, textTransform: "uppercase" }}>

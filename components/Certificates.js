@@ -4,10 +4,10 @@ import CardCarousel from "./CardCarousel"
 
 const Certificates = () => {
   const cards = [
-      <Certificate src='certificates/js_dsa.webp' />,
-      <Certificate src='certificates/Web_Dev_Bootcamp.webp' />,
-    <Certificate src='certificates/game-dev.webp' />,
-    <Certificate src='certificates/responsive-web.webp' />,
+    <Certificate key='1' src='certificates/js_dsa.webp' />,
+    <Certificate key='2' src='certificates/Web_Dev_Bootcamp.webp' />,
+    <Certificate key='3' src='certificates/game-dev.webp' />,
+    <Certificate key='4' src='certificates/responsive-web.webp' />,
   ]
   return (
     <section id='certificates'>
