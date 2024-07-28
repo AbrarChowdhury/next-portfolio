@@ -17,7 +17,7 @@ const ProjectItem = ({
   return (
     <div
       style={{
-        background: "url(rect_back.svg)",
+        background: "url(sub_proj_dark.svg)",
         backgroundSize: "100% 100%",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
