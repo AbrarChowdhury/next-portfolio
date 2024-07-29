@@ -32,7 +32,7 @@ const experienceData = [
         subProjects: [
           {
             imageSrc: "./images/virtyou.png",
-            imageAlt: "Langara Logo",
+            imageAlt: "virtyou langara screenshot",
             logoSrc: "images/langara.svg",
             logoAlt: "Langara Logo",
             companyURL: "https://langara.ca/",
@@ -105,8 +105,8 @@ const experienceData = [
         subProjectHeading: "HMS Modules:",
         subProjects: [
           {
-            imageSrc: "./project_images/hms.gif",
-            imageAlt: "Langara Logo",
+            imageSrc: "./project_images/hms_discharge.gif",
+            imageAlt: "hms data flow diagram",
             title: "Discharge Module",
             shortDesc: "Web-App: simplify patient discharges",
             iconList: virtyouTechList,
@@ -123,7 +123,7 @@ const experienceData = [
           },
           {
             imageSrc: "./project_images/hms.gif",
-            imageAlt: "Langara Logo",
+            imageAlt: "hms data flow diagram",
             title: "Lab Module",
             shortDesc: "Lab Module",
             iconList: virtyouTechList,
@@ -139,8 +139,8 @@ const experienceData = [
             },
           },
           {
-            imageSrc: "./project_images/hms.gif",
-            imageAlt: "Langara Logo",
+            imageSrc: "./project_images/hms_stastistics.gif",
+            imageAlt: "hms data flow diagram",
             title: "Statistics Module",
             shortDesc: "Statistics",
             iconList: virtyouTechList,
@@ -156,8 +156,8 @@ const experienceData = [
             },
           },
           {
-            imageSrc: "./project_images/hms.gif",
-            imageAlt: "Langara Logo",
+            imageSrc: "./project_images/hms_appointment.gif",
+            imageAlt: "hms data flow diagram",
             title: "Appointment Module",
             shortDesc: "Appointment",
             iconList: virtyouTechList,
