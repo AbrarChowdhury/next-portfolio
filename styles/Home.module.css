@@ -9,7 +9,7 @@
   align-items: center;
   align-content: center;
   height: 100vh;
-  border: 1px solid ;
+  /* border: 1px solid ; */
 }
 #hero svg{
   flex-grow: 0;
@@ -29,6 +29,7 @@
 }
 
 .scroll{
+  display: none;
   font-size: .8em;
   margin-left: 10%;
   position: absolute;
