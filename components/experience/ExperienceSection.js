@@ -20,7 +20,7 @@ const ExperienceSection = () => {
         <div className='lastClockContainer'>
           <img src='clock_end.svg' width='60px' className='clockImage' />
           <div>
-            <p className='dateText'>Jan 2020</p>
+            <p className='dateText'>Oct 2019</p>
           </div>
         </div>
       </div>
