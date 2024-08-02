@@ -18,7 +18,7 @@ const experienceData = [
       "In my role at Techdojo Ltd, I investigate, conceptualize, and develop inventive solutions tailored for international clientele. I harness external machine learning models and services to enhance the capabilities of the software we develop. My responsibilities include continuously exploring cutting-edge technologies and maintaining flexibility in technology stacks, prioritizing project specifications and timely delivery. I build Web apps, VR apps, and Mobile apps as required by the project needs. Additionally, I collaborate with teammates, conduct code reviews, and maintain thorough documentation to ensure the quality and reliability of our software solutions.",
     projects: [
       {
-        imageSrc: "./images/virtyou.png",
+        imageSrc: "./project_images/virtyou.png",
         imageAlt: "VirtYou Logo",
         title: "VirtYou",
         url: "https://virtyou.com/",
@@ -31,7 +31,7 @@ const experienceData = [
         subProjectHeading: "Client Work",
         subProjects: [
           {
-            imageSrc: "./images/virtyou.png",
+            imageSrc: "./project_images/langara.png",
             imageAlt: "virtyou langara screenshot",
             logoSrc: "images/langara.svg",
             logoAlt: "Langara Logo",
@@ -46,7 +46,7 @@ const experienceData = [
             },
           },
           {
-            imageSrc: "./images/virtyou.png",
+            imageSrc: "./project_images/mindbloom.jpg",
             imageAlt: "Mindbloom Logo",
             logoSrc: "images/mindbloom.svg",
             logoAlt: "Mindbloom Logo",
@@ -122,7 +122,7 @@ const experienceData = [
             },
           },
           {
-            imageSrc: "./project_images/hms.gif",
+            imageSrc: "./project_images/hms_lab.gif",
             imageAlt: "hms data flow diagram",
             title: "Lab Module",
             shortDesc: "Lab Module",
