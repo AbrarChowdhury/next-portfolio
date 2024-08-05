@@ -13,6 +13,7 @@ import Certificates from "../components/Certificates"
 import Blogs from "../components/Blogs"
 import Achievements from "../components/Achievements"
 import Explorations from "../components/Explorations"
+import XpSection from "../components/newXP/XpSection"
 export default function Home() {
   const ref = useRef()
   const scrollRef = useRef()
@@ -87,6 +88,7 @@ export default function Home() {
 
       <main className='main'>
         <About />
+        <XpSection/>
         <ExperienceSection />
         {/* <Explorations /> */}
         {/* <Blogs /> */} 
