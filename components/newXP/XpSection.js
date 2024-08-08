@@ -1,21 +1,29 @@
-import React, { useState, useRef } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { experience, projects } from "./xpData"
 import CardCarousel from "../CardCarousel"
 import LiveView from "../LiveView"
 import Button from "../button/Button"
 import Projects from "./Projects"
+import styles from "./xp.module.css"
 
 const XpSection = () => {
-  const [displayProjects, setProjects] = useState(projects)
+  const [displayProjects, setDisplayProjects] = useState(projects)
+  const [animation, setAnimation] = useState("")
   const proProjectsRef = useRef(null)
 
   const filterProjects = (during) => {
-    if (during === "all") {
-      setProjects(projects)
-    } else {
-      setProjects(projects.filter((project) => project.during === during))
-    }
-    proProjectsRef.current.scrollIntoView({ behavior: "smooth" })
+    setAnimation(styles.fadeOutScaleDown)
+    setTimeout(() => {
+      if (during === "all") {
+        setDisplayProjects(projects)
+      } else {
+        setDisplayProjects(
+          projects.filter((project) => project.during === during)
+        )
+      }
+      setAnimation(styles.fadeInScaleUp)
+      proProjectsRef.current.scrollIntoView({ behavior: "smooth" })
+    }, 500)
   }
 
   const experienceCards = experience.map(
@@ -62,14 +70,23 @@ const XpSection = () => {
   )
 
   const projectCards = displayProjects.map((project, i) => (
-    <Projects project={project} key={i} />
+    <div className={animation} key={i}>
+      <Projects project={project} />
+    </div>
   ))
+
+  useEffect(() => {
+    if (animation === styles.fadeInScaleUp) {
+      const timeout = setTimeout(() => setAnimation(""), 500)
+      return () => clearTimeout(timeout)
+    }
+  }, [animation])
 
   return (
     <div>
       <h1>Experience</h1>
       <CardCarousel cards={experienceCards} />
-      <div id="pro-projects" ref={proProjectsRef}>
+      <div id='pro-projects' ref={proProjectsRef}>
         <div
           style={{
             display: "flex",
