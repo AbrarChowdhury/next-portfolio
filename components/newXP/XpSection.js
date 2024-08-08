@@ -10,6 +10,8 @@ const XpSection = () => {
   const [displayProjects, setDisplayProjects] = useState(projects)
   const [animation, setAnimation] = useState("")
   const proProjectsRef = useRef(null)
+  const [during, setDuring]=useState(displayProjects[0].during)
+
 
   const filterProjects = (during) => {
     setAnimation(styles.fadeOutScaleDown)
@@ -20,10 +22,14 @@ const XpSection = () => {
         setDisplayProjects(
           projects.filter((project) => project.during === during)
         )
+        setDuring(displayProjects[0].during)
       }
       setAnimation(styles.fadeInScaleUp)
-      proProjectsRef.current.scrollIntoView({ behavior: "smooth" })
     }, 500)
+  }
+  const handleViewProjects=(during)=>{
+    filterProjects(during)
+    proProjectsRef.current.scrollIntoView({ behavior: "smooth" })
   }
 
   const experienceCards = experience.map(
@@ -50,7 +56,7 @@ const XpSection = () => {
           <h2>{date}</h2>
           <Button
             text={"view projects"}
-            handleClick={() => filterProjects(during)}
+            handleClick={() => handleViewProjects(during)}
           />
         </div>
         <h2>{role}</h2>
@@ -100,6 +106,7 @@ const XpSection = () => {
             <div
               className='filter-container'
               onClick={() => filterProjects("techdojo")}
+              style={{borderBottom:`5px solid rgba(0, 174, 193, ${displayProjects[0].during=="techdojo"?1:0.2})`, }}
             >
               <div className='title'>techdojo</div>
               <div className='sub'>Software Engineer</div>
@@ -107,6 +114,7 @@ const XpSection = () => {
             <div
               className='filter-container'
               onClick={() => filterProjects("bioforge-2")}
+              style={{borderBottom:`5px solid rgba(239, 125, 148, ${displayProjects[0].during=="bioforge-2"?1:0.2})`, }}
             >
               <div className='title'>bioforge</div>
               <div className='sub'>Software Engineer</div>
@@ -114,6 +122,7 @@ const XpSection = () => {
             <div
               className='filter-container'
               onClick={() => filterProjects("bioforge-1")}
+              style={{borderBottom:`5px solid rgba(50, 174, 114, ${displayProjects[0].during=="bioforge-1"?1:0.2})`, }}
             >
               <div className='title'>bioforge</div>
               <div className='sub'>Product Designer</div>
