@@ -19,16 +19,15 @@ const XpSection = () => {
     setProjects(projects.filter((project) => project.during == during))
   }
   const experienceCards = experience.map(
-    ({ date, role, company, companyURL, responsibilities, during }) => (
+    ({ date, role, company, companyURL, responsibilities, during, background }) => (
       <div
         style={{
           display: "block",
           padding: "15px",
-          background: "url(rect_back.svg)",
+          background: `url(${background})`,
           backgroundSize: "100% 100%",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
-          minHeight: "170px",
         }}
       >
         <div>

@@ -1,6 +1,6 @@
 import React from "react"
 
-const TechIcons = ({ iconList,className }) => {
+const TechIcons = ({ iconList,className,height="50px" }) => {
   return (
     <div className='tech' style={{ display: "flex", flexWrap:"wrap", maxWidth: "100%",}}>
       {iconList?.map(({ href, src, alt, name },i) => (
@@ -31,7 +31,7 @@ const TechIcons = ({ iconList,className }) => {
               className='tech-icon'
               style={{
                 width: "auto",
-                height: "50px",
+                height: height,
               }}
             />
           </a>
