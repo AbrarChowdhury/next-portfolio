@@ -1,23 +1,23 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import { experience, projects } from "./xpData"
 import CardCarousel from "../CardCarousel"
 import LiveView from "../LiveView"
 import Button from "../button/Button"
 import Projects from "./Projects"
+
 const XpSection = () => {
   const [displayProjects, setProjects] = useState(projects)
+  const proProjectsRef = useRef(null)
 
   const filterProjects = (during) => {
-    // techdojo
-    // bioforge-2
-    // bioforge-1
-    // all
-    if (during == "all") {
+    if (during === "all") {
       setProjects(projects)
-      return
+    } else {
+      setProjects(projects.filter((project) => project.during === during))
     }
-    setProjects(projects.filter((project) => project.during == during))
+    proProjectsRef.current.scrollIntoView({ behavior: "smooth" })
   }
+
   const experienceCards = experience.map(
     ({
       date,
@@ -64,11 +64,12 @@ const XpSection = () => {
   const projectCards = displayProjects.map((project, i) => (
     <Projects project={project} key={i} />
   ))
+
   return (
     <div>
       <h1>Experience</h1>
       <CardCarousel cards={experienceCards} />
-      <Section id='pro-projects'>
+      <div id="pro-projects" ref={proProjectsRef}>
         <div
           style={{
             display: "flex",
@@ -79,12 +80,6 @@ const XpSection = () => {
           <h1>Professional Projects</h1>
           <div style={{ display: "flex" }}>
             <img src='/images/filter.svg' alt='filter icon' width={"30px"} />
-            {/* <div
-            className='filter-container'
-            onClick={() => filterProjects("all")}
-          >
-            <div>all</div>
-          </div> */}
             <div
               className='filter-container'
               onClick={() => filterProjects("techdojo")}
@@ -109,7 +104,7 @@ const XpSection = () => {
           </div>
         </div>
         <CardCarousel cards={projectCards} />
-      </Section>
+      </div>
     </div>
   )
 }
