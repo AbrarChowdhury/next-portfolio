@@ -15,7 +15,8 @@ const experience = [
     role: "Software Engineer",
     responsibilities:
       "In my role at Techdojo Ltd, I investigate, conceptualize, and develop inventive solutions tailored for international clientele. I harness external machine learning models and services to enhance the capabilities of the software we develop. My responsibilities include continuously exploring cutting-edge technologies and maintaining flexibility in technology stacks, prioritizing project specifications and timely delivery. I build Web apps, VR apps, and Mobile apps as required by the project needs. Additionally, I collaborate with teammates, conduct code reviews, and maintain thorough documentation to ensure the quality and reliability of our software solutions.",
-  },
+      during: "techdojo",
+    },
   {
     date: "July 2023",
     company: "Bioforge Health Systems",
@@ -23,7 +24,8 @@ const experience = [
     role: "Software Engineer",
     responsibilities:
       "During my tenure at Bioforge Health Systems Ltd, I engaged in system design dialogues, emphasizing scalability, system flow, user requirements, and data management priorities. I designed and constructed modules for an integrated hospital management system and developed rapid, responsive, and interactive web applications that aligned with industry standards, with a strong focus on user experience (UX). I implemented componentization and application structuring using React.js, optimizing development efficiency for both myself and my team.",
-  },
+      during: "bioforge-2",
+    },
   {
     date: "September 2020",
     company: "Bioforge Health Systems",
@@ -31,7 +33,8 @@ const experience = [
     role: "Product Designer",
     responsibilities:
       "As a Product Designer at Bioforge Health Systems Ltd, I designed and built medical IoT devices and hardware. I made sketches for rapid idea generation and translated these sketches into 3D models using Autodesk 360. I built scaled-down models using 3D printing and craftsmanship, contributing to the development of innovative medical products.",
-  },
+      during: "bioforge-1",
+    },
 ]
 
 const projects = [
