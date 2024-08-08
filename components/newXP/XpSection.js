@@ -19,7 +19,15 @@ const XpSection = () => {
     setProjects(projects.filter((project) => project.during == during))
   }
   const experienceCards = experience.map(
-    ({ date, role, company, companyURL, responsibilities, during, background }) => (
+    ({
+      date,
+      role,
+      company,
+      companyURL,
+      responsibilities,
+      during,
+      background,
+    }) => (
       <div
         style={{
           display: "block",
@@ -60,40 +68,48 @@ const XpSection = () => {
     <div>
       <h1>Experience</h1>
       <CardCarousel cards={experienceCards} />
-      <div style={{display:"flex", justifyContent:"space-between", alignItems:"baseline"}}>
-        <h1>Professional Projects</h1>
-        <div style={{display:"flex"}}>
-          <img src='/images/filter.svg' alt='filter icon' width={"30px"} />
-          {/* <div
+      <Section id='pro-projects'>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "baseline",
+          }}
+        >
+          <h1>Professional Projects</h1>
+          <div style={{ display: "flex" }}>
+            <img src='/images/filter.svg' alt='filter icon' width={"30px"} />
+            {/* <div
             className='filter-container'
             onClick={() => filterProjects("all")}
           >
             <div>all</div>
           </div> */}
-          <div
-            className='filter-container'
-            onClick={() => filterProjects("techdojo")}
-          >
-            <div className='title'>techdojo</div>
-            <div className='sub'>Software Engineer</div>
-          </div>
-          <div
-            className='filter-container'
-            onClick={() => filterProjects("bioforge-2")}
-          >
-            <div className='title'>bioforge</div>
-            <div className='sub'>Software Engineer</div>
-          </div>
-          <div
-            className='filter-container'
-            onClick={() => filterProjects("bioforge-1")}
-          >
-            <div className='title'>bioforge</div>
-            <div className='sub'>Product Designer</div>
+            <div
+              className='filter-container'
+              onClick={() => filterProjects("techdojo")}
+            >
+              <div className='title'>techdojo</div>
+              <div className='sub'>Software Engineer</div>
+            </div>
+            <div
+              className='filter-container'
+              onClick={() => filterProjects("bioforge-2")}
+            >
+              <div className='title'>bioforge</div>
+              <div className='sub'>Software Engineer</div>
+            </div>
+            <div
+              className='filter-container'
+              onClick={() => filterProjects("bioforge-1")}
+            >
+              <div className='title'>bioforge</div>
+              <div className='sub'>Product Designer</div>
+            </div>
           </div>
         </div>
-      </div>
-      <CardCarousel cards={projectCards} />
+        <CardCarousel cards={projectCards} />
+      </Section>
     </div>
   )
 }
