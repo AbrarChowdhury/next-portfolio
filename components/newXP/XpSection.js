@@ -7,7 +7,6 @@ import Projects from "./Projects"
 const XpSection = () => {
   const [displayProjects, setProjects] = useState(projects)
 
-  
   const filterProjects = (during) => {
     // techdojo
     // bioforge-2
@@ -62,11 +61,39 @@ const XpSection = () => {
     <div>
       <h1>Experience</h1>
       <CardCarousel cards={experienceCards} />
-      <button onClick={()=>filterProjects("all")}>all</button>
-      <button onClick={()=>filterProjects("techdojo")}>techdojo</button>
-      <button onClick={()=>filterProjects("bioforge-2")}>bioforge 2</button>
-      <button onClick={()=>filterProjects("bioforge-1")}>bioforge 1</button>
-      {/* <Projects project={{ title: "masti" }} /> */}
+      <div style={{display:"flex", justifyContent:"space-between", alignItems:"baseline"}}>
+        <h1>Professional Projects</h1>
+        <div style={{display:"flex"}}>
+          <img src='/images/filter.svg' alt='filter icon' width={"30px"} />
+          {/* <div
+            className='filter-container'
+            onClick={() => filterProjects("all")}
+          >
+            <div>all</div>
+          </div> */}
+          <div
+            className='filter-container'
+            onClick={() => filterProjects("techdojo")}
+          >
+            <div className='title'>techdojo</div>
+            <div className='sub'>Software Engineer</div>
+          </div>
+          <div
+            className='filter-container'
+            onClick={() => filterProjects("bioforge-2")}
+          >
+            <div className='title'>bioforge</div>
+            <div className='sub'>Software Engineer</div>
+          </div>
+          <div
+            className='filter-container'
+            onClick={() => filterProjects("bioforge-1")}
+          >
+            <div className='title'>bioforge</div>
+            <div className='sub'>Product Designer</div>
+          </div>
+        </div>
+      </div>
       <CardCarousel cards={projectCards} />
     </div>
   )

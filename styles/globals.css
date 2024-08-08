@@ -76,6 +76,16 @@ a {
 }
 
 /* EXPERIENCE */
+/* NEW */
+.filter-container {
+  text-align: center;
+  margin: 6px;
+  .sub {
+    font-size: 0.6em;
+
+  }
+}
+/* NEW */
 .experienceContainer {
   position: relative;
   /* border-bottom: 5px solid #abdcec; */
