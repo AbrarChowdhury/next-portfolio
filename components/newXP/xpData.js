@@ -87,6 +87,27 @@ const projects = [
     during: "techdojo",
   },
   {
+    imageSrc: "./images/reflect.png",
+    imageAlt: "Reflect AI screenshot",
+    title: "Reflect AI",
+    url: "https://www.alphyco.com/",
+    shortDesc:"AI driven communication add-on for Webex, Google Meet, Outlook™, and Gmail™",
+    description:
+      "Reflect AI is a communication add-on for Webex, Google Meet, Outlook™, and Gmail™ that flags harmful, unlawful, and unethical language before sending. For video calls in Webex and Google Meet, it converts speech-to-text and provides live feedback through icons and emojis, helping protect against ethical breaches.",
+    role: {
+      text: "I primarily worked on the Webex integration for Reflect AI. My responsibilities included:",
+      bullets: [
+        "Designing and implementing the WebSocket architecture for providing live feedback.",
+        "Researching and understanding the Webex developer documentation.",
+        "Developing the extension for Webex.",
+        "Implementing voice-to-text functionality for Webex video calls.",
+        "Resolving permission issues and ensuring seamless integration.",
+      ],
+    },
+    iconList: reflectTechList,
+    during: "techdojo",
+  },
+  {
     imageSrc: "./project_images/hms.gif",
     imageAlt: "HMS screenshot",
     title: "Hospital Management System",
@@ -103,7 +124,7 @@ const projects = [
     imageAlt: "hms data flow diagram",
     title: "Discharge Module",
     shortDesc: "Web-App: simplify patient discharges",
-    iconList: virtyouTechList,
+    iconList: hmsTechList,
     description:
       "The HMS-Discharge Module is part of a comprehensive hospital management system designed to streamline the discharge process for patients. It ensures accurate and efficient handling of discharge procedures, including documentation and coordination with other hospital departments.",
     role: {
@@ -121,7 +142,7 @@ const projects = [
     imageAlt: "hms data flow diagram",
     title: "Lab Module",
     shortDesc: "Lab Module",
-    iconList: virtyouTechList,
+    iconList: hmsTechList,
     description:
       "The HMS-Lab Module manages the laboratory operations within the hospital, including test orders, results, and lab workflows.",
     role: {
@@ -139,7 +160,7 @@ const projects = [
     imageAlt: "hms data flow diagram",
     title: "Statistics Module",
     shortDesc: "Statistics",
-    iconList: virtyouTechList,
+    iconList: hmsTechList,
     description:
       "The HMS-Statistics Module provides comprehensive data analytics and reporting tools for hospital management, aiding in decision-making and performance evaluation.",
     role: {
@@ -157,7 +178,7 @@ const projects = [
     imageAlt: "hms data flow diagram",
     title: "Appointment Module",
     shortDesc: "Appointment",
-    iconList: virtyouTechList,
+    iconList: hmsTechList,
     description:
       "The HMS-Appointment Module facilitates the scheduling and management of patient appointments, improving the efficiency of hospital operations.",
     role: {

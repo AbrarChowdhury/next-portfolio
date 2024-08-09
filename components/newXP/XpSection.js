@@ -8,26 +8,20 @@ import styles from "./xp.module.css"
 
 const XpSection = () => {
   const [displayProjects, setDisplayProjects] = useState(projects)
-  const [animation, setAnimation] = useState("")
   const proProjectsRef = useRef(null)
-  const [during, setDuring]=useState(displayProjects[0].during)
-
+  // const [during, setDuring] = useState(displayProjects[0].during)
 
   const filterProjects = (during) => {
-    setAnimation(styles.fadeOutScaleDown)
-    setTimeout(() => {
-      if (during === "all") {
-        setDisplayProjects(projects)
-      } else {
-        setDisplayProjects(
-          projects.filter((project) => project.during === during)
-        )
-        setDuring(displayProjects[0].during)
-      }
-      setAnimation(styles.fadeInScaleUp)
-    }, 500)
+    if (during === "all") {
+      setDisplayProjects(projects)
+    } else {
+      setDisplayProjects(
+        projects.filter((project) => project.during === during)
+      )
+    }
   }
-  const handleViewProjects=(during)=>{
+
+  const handleViewProjects = (during) => {
     filterProjects(during)
     proProjectsRef.current.scrollIntoView({ behavior: "smooth" })
   }
@@ -60,33 +54,27 @@ const XpSection = () => {
           />
         </div>
         <h2>{role}</h2>
-        <h3
+        <div
           style={{
             marginTop: "-10px",
             marginBottom: "5px",
             textTransform: "uppercase",
+            display: "flex",
           }}
         >
-          {company}
+          <h3>{company}</h3>
           <LiveView link={companyURL} />
-        </h3>
+        </div>
         <p>{responsibilities}</p>
       </div>
     )
   )
 
   const projectCards = displayProjects.map((project, i) => (
-    <div className={animation} key={i}>
+    <div className={styles.fadeInScaleUp} key={project.title+i}>
       <Projects project={project} />
     </div>
   ))
-
-  useEffect(() => {
-    if (animation === styles.fadeInScaleUp) {
-      const timeout = setTimeout(() => setAnimation(""), 500)
-      return () => clearTimeout(timeout)
-    }
-  }, [animation])
 
   return (
     <div>
@@ -106,7 +94,11 @@ const XpSection = () => {
             <div
               className='filter-container'
               onClick={() => filterProjects("techdojo")}
-              style={{borderBottom:`5px solid rgba(0, 174, 193, ${displayProjects[0].during=="techdojo"?1:0.2})`, }}
+              style={{
+                borderBottom: `5px solid rgba(0, 174, 193, ${
+                  displayProjects[0].during == "techdojo" ? 1 : 0.2
+                })`,
+              }}
             >
               <div className='title'>techdojo</div>
               <div className='sub'>Software Engineer</div>
@@ -114,7 +106,11 @@ const XpSection = () => {
             <div
               className='filter-container'
               onClick={() => filterProjects("bioforge-2")}
-              style={{borderBottom:`5px solid rgba(239, 125, 148, ${displayProjects[0].during=="bioforge-2"?1:0.2})`, }}
+              style={{
+                borderBottom: `5px solid rgba(239, 125, 148, ${
+                  displayProjects[0].during == "bioforge-2" ? 1 : 0.2
+                })`,
+              }}
             >
               <div className='title'>bioforge</div>
               <div className='sub'>Software Engineer</div>
@@ -122,7 +118,11 @@ const XpSection = () => {
             <div
               className='filter-container'
               onClick={() => filterProjects("bioforge-1")}
-              style={{borderBottom:`5px solid rgba(50, 174, 114, ${displayProjects[0].during=="bioforge-1"?1:0.2})`, }}
+              style={{
+                borderBottom: `5px solid rgba(50, 174, 114, ${
+                  displayProjects[0].during == "bioforge-1" ? 1 : 0.2
+                })`,
+              }}
             >
               <div className='title'>bioforge</div>
               <div className='sub'>Product Designer</div>

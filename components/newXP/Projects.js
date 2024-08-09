@@ -1,5 +1,6 @@
 import React from 'react'
 import TechIcons from '../TechIcons'
+import LiveView from '../LiveView'
 
 const Projects = ({project}) => {
   const imageMap = {
