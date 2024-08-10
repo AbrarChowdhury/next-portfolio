@@ -89,7 +89,7 @@ export default function Home() {
       <main className='main'>
         <About />
         <XpSection/>
-        <ExperienceSection />
+        {/* <ExperienceSection /> */}
         {/* <Explorations /> */}
         {/* <Blogs /> */} 
         {/* replace explorations with blogs later on */}

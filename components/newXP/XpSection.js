@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useRef } from "react"
 import { experience, projects } from "./xpData"
 import CardCarousel from "../CardCarousel"
-import LiveView from "../LiveView"
-import Button from "../button/Button"
 import Projects from "./Projects"
 import styles from "./xp.module.css"
 import Modal from "./Modal"
+import { Experience } from "./Experience"
 
 const XpSection = () => {
   const [modal, setModal] = useState(false)
@@ -28,46 +27,8 @@ const XpSection = () => {
   }
 
   const experienceCards = experience.map(
-    ({
-      date,
-      role,
-      company,
-      companyURL,
-      responsibilities,
-      during,
-      background,
-    }) => (
-      <div
-        style={{
-          display: "block",
-          padding: "15px",
-          background: `url(${background})`,
-          backgroundSize: "100% 100%",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-        }}
-      >
-        <div>
-          <h2>{date}</h2>
-          <Button
-            text={"view projects"}
-            handleClick={() => handleViewProjects(during)}
-          />
-        </div>
-        <h2>{role}</h2>
-        <div
-          style={{
-            marginTop: "-10px",
-            marginBottom: "5px",
-            textTransform: "uppercase",
-            display: "flex",
-          }}
-        >
-          <h3>{company}</h3>
-          <LiveView link={companyURL} />
-        </div>
-        <p>{responsibilities}</p>
-      </div>
+    (xp) => (
+      <Experience xp={xp}/>
     )
   )
 
