@@ -5,11 +5,12 @@ import LiveView from "../LiveView"
 import Button from "../button/Button"
 import Projects from "./Projects"
 import styles from "./xp.module.css"
+import Modal from "./Modal"
 
 const XpSection = () => {
+  const [modal, setModal] = useState(false)
   const [displayProjects, setDisplayProjects] = useState(projects)
   const proProjectsRef = useRef(null)
-  // const [during, setDuring] = useState(displayProjects[0].during)
 
   const filterProjects = (during) => {
     if (during === "all") {
@@ -72,12 +73,13 @@ const XpSection = () => {
 
   const projectCards = displayProjects.map((project, i) => (
     <div className={styles.fadeInScaleUp} key={project.title+i}>
-      <Projects project={project} />
+      <Projects project={project} setModal={setModal}/>
     </div>
   ))
 
   return (
     <div>
+      {modal && <Modal setModal={setModal} modal={modal} />}
       <h1>Experience</h1>
       <CardCarousel cards={experienceCards} />
       <div id='pro-projects' ref={proProjectsRef}>

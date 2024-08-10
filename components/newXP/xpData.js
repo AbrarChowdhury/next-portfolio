@@ -55,6 +55,7 @@ const projects = [
     during: "techdojo",
   },
   {
+    isSubProject:true,
     imageSrc: "./project_images/langara.png",
     imageAlt: "virtyou langara screenshot",
     logoSrc: "images/langara.svg",
@@ -71,6 +72,7 @@ const projects = [
     during: "techdojo",
   },
   {
+    isSubProject:true,
     imageSrc: "./project_images/mindbloom.jpg",
     imageAlt: "Mindbloom Logo",
     logoSrc: "images/mindbloom.svg",
@@ -91,7 +93,8 @@ const projects = [
     imageAlt: "Reflect AI screenshot",
     title: "Reflect AI",
     url: "https://www.alphyco.com/",
-    shortDesc:"AI driven communication add-on for Webex, Google Meet, Outlook™, and Gmail™",
+    shortDesc:
+      "AI driven communication add-on for Webex, Google Meet, Outlook™, and Gmail™",
     description:
       "Reflect AI is a communication add-on for Webex, Google Meet, Outlook™, and Gmail™ that flags harmful, unlawful, and unethical language before sending. For video calls in Webex and Google Meet, it converts speech-to-text and provides live feedback through icons and emojis, helping protect against ethical breaches.",
     role: {
@@ -120,6 +123,7 @@ const projects = [
     during: "bioforge-2",
   },
   {
+    isSubProject:true,
     imageSrc: "./project_images/hms_discharge.gif",
     imageAlt: "hms data flow diagram",
     title: "Discharge Module",
@@ -138,6 +142,7 @@ const projects = [
     during: "bioforge-2",
   },
   {
+    isSubProject:true,
     imageSrc: "./project_images/hms_lab.gif",
     imageAlt: "hms data flow diagram",
     title: "Lab Module",
@@ -156,6 +161,7 @@ const projects = [
     during: "bioforge-2",
   },
   {
+    isSubProject:true,
     imageSrc: "./project_images/hms_stastistics.gif",
     imageAlt: "hms data flow diagram",
     title: "Statistics Module",
@@ -174,6 +180,7 @@ const projects = [
     during: "bioforge-2",
   },
   {
+    isSubProject:true,
     imageSrc: "./project_images/hms_appointment.gif",
     imageAlt: "hms data flow diagram",
     title: "Appointment Module",
@@ -213,6 +220,7 @@ const projects = [
     imageSrc: "./images/incubator1.png",
     imageAlt: "Neonatal Incubator screenshot",
     title: "Neonatal Incubator",
+    shortDesc:"Affordable, portable, designed for low-resource environments",
     description:
       "Designed a low-cost neonatal incubator to provide a controlled environment for newborns. The design focused on affordability and ease of use in low-resource settings.",
     role: {
@@ -229,6 +237,7 @@ const projects = [
     imageSrc: "./images/ptl.jpg",
     imageAlt: "Phototherapy Lights screenshot",
     title: "Phototherapy Lights",
+    shortDesc: "Phototherapy lights for treating neonatal jaundice",
     description:
       "Developed phototherapy lights for treating neonatal jaundice. The design ensures effective treatment while being safe and affordable.",
     role: {
