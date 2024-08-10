@@ -26,15 +26,11 @@ const XpSection = () => {
     proProjectsRef.current.scrollIntoView({ behavior: "smooth" })
   }
 
-  const experienceCards = experience.map(
-    (xp) => (
-      <Experience xp={xp}/>
-    )
-  )
+  const experienceCards = experience.map((xp) => <Experience xp={xp} />)
 
   const projectCards = displayProjects.map((project, i) => (
-    <div className={styles.fadeInScaleUp} key={project.title+i}>
-      <Projects project={project} setModal={setModal}/>
+    <div className={styles.fadeInScaleUp} key={project.title + i}>
+      <Projects project={project} setModal={setModal} />
     </div>
   ))
 
@@ -58,6 +54,7 @@ const XpSection = () => {
               className='filter-container'
               onClick={() => filterProjects("techdojo")}
               style={{
+                cursor:"pointer",
                 borderBottom: `5px solid rgba(0, 174, 193, ${
                   displayProjects[0].during == "techdojo" ? 1 : 0.2
                 })`,
@@ -70,6 +67,7 @@ const XpSection = () => {
               className='filter-container'
               onClick={() => filterProjects("bioforge-2")}
               style={{
+                cursor:"pointer",
                 borderBottom: `5px solid rgba(239, 125, 148, ${
                   displayProjects[0].during == "bioforge-2" ? 1 : 0.2
                 })`,
@@ -82,6 +80,7 @@ const XpSection = () => {
               className='filter-container'
               onClick={() => filterProjects("bioforge-1")}
               style={{
+                cursor:"pointer",
                 borderBottom: `5px solid rgba(50, 174, 114, ${
                   displayProjects[0].during == "bioforge-1" ? 1 : 0.2
                 })`,
