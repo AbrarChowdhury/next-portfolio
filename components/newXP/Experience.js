@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import Button from "../button/Button";
-import LiveView from "../LiveView";
+import React, { useState } from "react"
+import Button from "../button/Button"
+import LiveView from "../LiveView"
 
 export const Experience = ({ xp, handleViewProjects }) => {
   const {
@@ -11,13 +11,13 @@ export const Experience = ({ xp, handleViewProjects }) => {
     responsibilities,
     during,
     background,
-  } = xp;
+  } = xp
 
-  const [showMore, setShowMore] = useState(false);
+  const [showMore, setShowMore] = useState(false)
 
   const handleToggle = () => {
-    setShowMore(!showMore);
-  };
+    setShowMore(!showMore)
+  }
 
   return (
     <div
@@ -31,28 +31,36 @@ export const Experience = ({ xp, handleViewProjects }) => {
       }}
     >
       <div>
-        <h2>{date}</h2>
+        <h3>{date}</h3>
       </div>
-      <h2>{role}</h2>
+      <h2 style={{margin:"-10px 0 "}}>{role}</h2>
       <div
         style={{
-          marginTop: "-10px",
-          marginBottom: "5px",
+
           textTransform: "uppercase",
           display: "flex",
         }}
       >
-        <h3>{company}</h3>
+        <p>{company}</p>
         <LiveView link={companyURL} />
       </div>
-      <Button text={"view projects"} handleClick={() => handleViewProjects(during)} />
-
+      {/* "View Projects" as a Text with Arrow */}
+      <div
+        onClick={handleToggle}
+        style={{
+          cursor: "pointer",
+          display: "inline-flex",
+          alignItems: "center",
+        }}
+      >
+        <span>More Details</span>
+        <span style={{ marginLeft: "5px" }}>➔</span>
+      </div>
       {/* View More Button */}
       <Button
-        handleClick={handleToggle}
+        handleClick={() => handleViewProjects(during)}
         text={showMore ? "View Less" : "View More"}
-      >
-      </Button>
+      />
 
       {/* Responsibilities */}
       <div
@@ -66,5 +74,5 @@ export const Experience = ({ xp, handleViewProjects }) => {
         <p style={{ marginBottom: 20 }}>{responsibilities}</p>
       </div>
     </div>
-  );
-};
+  )
+}
