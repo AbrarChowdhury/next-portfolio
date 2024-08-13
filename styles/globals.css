@@ -20,7 +20,8 @@ body {
   font-family: "PPGoshaSans", sans-serif, Segoe UI, Roboto, Oxygen, Ubuntu,
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: #0f1b61;
-  background: #f4f9fc;
+  /* background: #f4f9fc; */
+  background: #fff3d3;
 }
 
 h1 {
@@ -76,6 +77,16 @@ a {
 }
 
 /* EXPERIENCE */
+/* NEW */
+.filter-container {
+  text-align: center;
+  margin: 6px;
+  .sub {
+    font-size: 0.6em;
+
+  }
+}
+/* NEW */
 .experienceContainer {
   position: relative;
   /* border-bottom: 5px solid #abdcec; */

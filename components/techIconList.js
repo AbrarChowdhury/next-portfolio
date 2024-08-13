@@ -47,6 +47,12 @@ const virtyouTechList = [
     alt: "next.js",
     name: "Next.js",
   },
+  {
+    href: "https://docs.python.org/3/",
+    src: "tech_icons/python.svg",
+    alt: "python",
+    name: "Python",
+  },
 ]
 
 const langaraTechList = [
@@ -125,6 +131,12 @@ const mindbloomTechList = [
     alt: "nodejs",
     name: "Node.js",
   },
+  {
+    href: "https://docs.python.org/3/",
+    src: "tech_icons/python.svg",
+    alt: "python",
+    name: "Python",
+  },
 ]
 
 const reflectTechList = [
@@ -197,14 +209,50 @@ const hmsTechList = [
     alt: "socketio",
     name: "Socket.IO",
   },
+  {
+    href: "https://socket.io/docs/v4/",
+    src: "tech_icons/rest.svg",
+    alt: "REST API",
+    name: "REST API",
+  },
 ]
 
 const vsmTechLists = [
+  {
+    href: "https://react.dev/",
+    src: "tech_icons/react.svg",
+    alt: "react.js",
+    name: "React.js",
+  },
+  {
+    href: "https://mui.com/material-ui/",
+    src: "tech_icons/mui.svg",
+    alt: "Material UI",
+    name: "Material UI",
+  },
+  {
+    href: "https://www.arduino.cc/",
+    src: "tech_icons/arduino.svg",
+    alt: "arduino",
+    name: "Arduino",
+  },
+  {
+    href: "https://cplusplus.com/",
+    src: "tech_icons/cpp.svg",
+    alt: "C++",
+    name: "C++",
+  },
   {
     href: "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs",
     src: "tech_icons/nodejs.svg",
     alt: "nodejs",
     name: "Node.js",
+  },
+  {
+    href: "https://www.mongodb.com/",
+    src: "tech_icons/mongo_leaf.svg",
+    alt: "mongodb",
+    name: "MongoDB",
   },
 ]
 

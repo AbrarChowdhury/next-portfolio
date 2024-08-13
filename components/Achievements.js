@@ -52,7 +52,7 @@ function Achievement({ award, date, position, url, role }) {
       style={{
         display: "block",
         padding: "15px",
-        background: "url(rect_back.svg)",
+        background: "url(feelgoodboxes/rect_back_yellow.svg)",
         backgroundSize: "100% 100%",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",

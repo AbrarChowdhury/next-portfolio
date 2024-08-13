@@ -27,7 +27,7 @@ const Card = ({ project }) => {
         display: "block",
         padding: "10px",
         position: "relative",
-        background: "url(rect_back.svg)",
+        background: "url(feelgoodboxes/rect_back_pink.svg)",
         backgroundSize: "100% 100%",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
