@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "../button/Button";
 import LiveView from "../LiveView";
 
-export const Experience = ({ xp }) => {
+export const Experience = ({ xp, handleViewProjects }) => {
   const {
     date,
     role,
