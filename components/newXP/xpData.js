@@ -46,6 +46,8 @@ const projects = [
     imageAlt: "VirtYou Logo",
     title: "VirtYou",
     url: "https://virtyou.com/",
+    shortDesc:
+      "Automated emotion (AE) software for photorealistic 3D virtual actors.",
     description:
       "VirtYou specializes in creating automated emotion (AE) software for photorealistic 3D virtual actors. This technology enables virtual actors to deliver emotionally compelling, interactive, and live performances using AI-generated responses as a script.",
     role: {
@@ -55,7 +57,7 @@ const projects = [
     during: "techdojo",
   },
   {
-    isSubProject:true,
+    isSubProject: true,
     imageSrc: "./project_images/langara.png",
     imageAlt: "virtyou langara screenshot",
     logoSrc: "images/langara.svg",
@@ -72,7 +74,7 @@ const projects = [
     during: "techdojo",
   },
   {
-    isSubProject:true,
+    isSubProject: true,
     imageSrc: "./project_images/mindbloom.jpg",
     imageAlt: "Mindbloom Logo",
     logoSrc: "images/mindbloom.svg",
@@ -114,6 +116,8 @@ const projects = [
     imageSrc: "./project_images/hms.gif",
     imageAlt: "HMS screenshot",
     title: "Hospital Management System",
+    shortDesc:
+      "An integrated solution designed to streamline hospital operations",
     description:
       "Bioforge HMS (Hospital Management System) is an integrated solution designed to streamline hospital operations, enhance patient care, and improve overall efficiency. It includes various modules such as discharge, lab, appointment, and statistics, each tailored to address specific aspects of hospital management.",
     role: {
@@ -123,7 +127,7 @@ const projects = [
     during: "bioforge-2",
   },
   {
-    isSubProject:true,
+    isSubProject: true,
     imageSrc: "./project_images/hms_discharge.gif",
     imageAlt: "hms data flow diagram",
     title: "Discharge Module",
@@ -142,7 +146,7 @@ const projects = [
     during: "bioforge-2",
   },
   {
-    isSubProject:true,
+    isSubProject: true,
     imageSrc: "./project_images/hms_lab.gif",
     imageAlt: "hms data flow diagram",
     title: "Lab Module",
@@ -161,7 +165,7 @@ const projects = [
     during: "bioforge-2",
   },
   {
-    isSubProject:true,
+    isSubProject: true,
     imageSrc: "./project_images/hms_stastistics.gif",
     imageAlt: "hms data flow diagram",
     title: "Statistics Module",
@@ -180,7 +184,7 @@ const projects = [
     during: "bioforge-2",
   },
   {
-    isSubProject:true,
+    isSubProject: true,
     imageSrc: "./project_images/hms_appointment.gif",
     imageAlt: "hms data flow diagram",
     title: "Appointment Module",
@@ -220,7 +224,7 @@ const projects = [
     imageSrc: "./images/incubator1.png",
     imageAlt: "Neonatal Incubator screenshot",
     title: "Neonatal Incubator",
-    shortDesc:"Affordable, portable, designed for low-resource environments",
+    shortDesc: "Affordable, portable, designed for low-resource environments",
     description:
       "Designed a low-cost neonatal incubator to provide a controlled environment for newborns. The design focused on affordability and ease of use in low-resource settings.",
     role: {
