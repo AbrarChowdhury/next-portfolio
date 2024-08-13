@@ -26,7 +26,7 @@ const XpSection = () => {
     proProjectsRef.current.scrollIntoView({ behavior: "smooth" })
   }
 
-  const experienceCards = experience.map((xp) => <Experience xp={xp} handleViewProjects={handleViewProjects}/>)
+  const experienceCards = experience.map((xp) => <Experience xp={xp} key={xp.date} handleViewProjects={handleViewProjects}/>)
 
   const projectCards = displayProjects.map((project, i) => (
     <div className={styles.fadeInScaleUp} key={project.title + i}>
